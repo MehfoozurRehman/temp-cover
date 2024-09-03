@@ -251,7 +251,6 @@ export default function Certificate() {
                 >
                   (4)
                 </Text>
-
                 <Text
                   style={{
                     fontSize: "10px",
