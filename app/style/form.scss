@@ -1,0 +1,62 @@
+.from__main__container {
+  width: 100vw;
+  background-image: url(../../public/form.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__warper {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+}
+.form__input__warper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+  gap: 1em;
+}
+.input__entry {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+.input__entry__error {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+.input__entry__label__input {
+  width: 90%;
+  background-color: #f8f8f8;
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 60px;
+  outline: none;
+  margin-top: 5px;
+}
+.input__entry__label {
+  font-size: 12px;
+  font-weight: 700;
+}
+.input__entry__label__input::placeholder {
+  font-size: 12px;
+}
