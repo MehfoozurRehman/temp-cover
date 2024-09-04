@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type Policy {
+  number              String?
+  insured             String?
+  description         String?
+  dateIssued          DateTime?
+  effectiveDate       DateTime?
+  expirationDate      DateTime?
+  reasonForIssue      String?
+  premimum            Float?
+  registrationNo      String?
+  vehicleValue        Float?
+  vehicleDetails      String?
+  compulsoryExcessFee Float?
+  voluntaryExcessFee  Float?
+}
+
+type Certificate {
+  number         String?
+  insured        String?
+  effectiveDate  DateTime?
+  expirationDate DateTime?
+  registrationNo String?
+}
+
+model Form {
+  id          String      @id @default(cuid()) @map("_id") @db.ObjectId
+  policy      Policy
+  certificate Certificate
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
