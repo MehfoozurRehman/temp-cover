@@ -10,14 +10,12 @@ import {
 } from "@react-pdf/renderer";
 
 import React from "react";
-import arialbd from "../../assets/arialbd.ttf";
-import firstlogo from "../../assets/firstlogo.png";
 
 Font.register({
   family: "Arial",
   fonts: [
     {
-      src: arialbd,
+      src: "/arialbd.ttf",
       fontWeight: "bold",
     },
   ],
@@ -29,7 +27,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Certificate() {
+export default function Pdf({ data }: { data: any }) {
   return (
     <PDFViewer
       style={{
@@ -60,7 +58,7 @@ export default function Certificate() {
                 padding: "0px 10px",
               }}
             >
-              <Image style={{ width: "130px" }} src={firstlogo} />
+              <Image style={{ width: "130px" }} src="/firstlogo.png" />
             </View>
             <View
               style={{
