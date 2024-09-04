@@ -1871,7 +1871,7 @@ video {
 @font-face {
   font-family: Icomoon;
   src: url("");
-  /* src: url("") format("embedded-opentype"),url("icomoon.1db46404.ttf") format("truetype"),url("icomoon.59ef7398.woff") format("woff"),url("") format("svg"); */
+  src: url("") format("embedded-opentype"),url("../fonts/icomoon.1db46404.ttf") format("truetype"),url("../fonts/icomoon.1db46404.ttf") format("woff"),url("") format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: block;
