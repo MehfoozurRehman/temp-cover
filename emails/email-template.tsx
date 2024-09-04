@@ -27,14 +27,14 @@ export const NotionMagicLinkEmail = ({
 }: NotionMagicLinkEmailProps) => (
   <Html>
     <Body style={main}>
-      <Container style={{ margin: "0 auto" }}>
-        <span style={{ width: "600px" }}>
+      <Container style={{ margin: "0 auto", maxWidth: "1000px", padding: 10 }}>
+        <span style={{ width: "100%" }}>
           <Text
             style={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
-              width: "600px",
+              width: "100%",
               backgroundColor: "rgb(35, 67, 151)",
               fontSize: "16px",
               padding: "10px ",
@@ -63,6 +63,10 @@ export const NotionMagicLinkEmail = ({
               src="/static/tempcover.png"
               alt="Vercel"
               className="my-0 mx-auto"
+              style={{
+                flex: "1",
+                maxWidth: "250px",
+              }}
             />
             <span
               style={{
@@ -159,7 +163,6 @@ export const NotionMagicLinkEmail = ({
             Check out the summary of your policy and a link to view and print
             your policy documents below.
           </Text>
-
           <Text
             style={{
               width: "100%",
@@ -234,9 +237,7 @@ export const NotionMagicLinkEmail = ({
               borderRadius: "5px",
               margin: "10px 10px 20px",
               padding: "12px 0",
-
-              maxWidth: "100%",
-              width: "600px",
+              width: "100%",
             }}
           >
             <span
@@ -440,8 +441,6 @@ export const NotionMagicLinkEmail = ({
                 padding: "0 5px 5px",
                 fontWeight: "bold",
                 textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
                 color: "#333333",
               }}
             >
