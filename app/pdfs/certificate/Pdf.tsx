@@ -1,3 +1,4 @@
+"use client";
 import {
   Document,
   Font,
@@ -55,7 +56,7 @@ export default function Pdf({ data }: { data: any }) {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-                padding: "0px 10px",
+                padding: "0px 20px",
               }}
             >
               <Image style={{ width: "130px" }} src="/firstlogo.png" />
@@ -76,8 +77,10 @@ export default function Pdf({ data }: { data: any }) {
                 height: "3px",
                 marginTop: "1px",
                 padding: "0px 8px",
+                marginLeft: "10px",
+                marginRight: "10px",
               }}
-            ></View>
+            />
             <View
               style={{
                 width: "100%",
@@ -110,7 +113,7 @@ export default function Pdf({ data }: { data: any }) {
             >
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                 }}
               >
                 Certificate Number:TCV-MOT-1739398
@@ -127,7 +130,7 @@ export default function Pdf({ data }: { data: any }) {
             >
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontFamily: "Arial",
                 }}
               >
@@ -136,7 +139,7 @@ export default function Pdf({ data }: { data: any }) {
 
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   paddingLeft: "10px",
                   fontFamily: "Arial",
                 }}
@@ -145,7 +148,7 @@ export default function Pdf({ data }: { data: any }) {
               </Text>
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontWeight: "medium",
                   paddingLeft: "5px",
                 }}
@@ -164,7 +167,7 @@ export default function Pdf({ data }: { data: any }) {
             >
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontFamily: "Arial",
                 }}
               >
@@ -173,7 +176,7 @@ export default function Pdf({ data }: { data: any }) {
 
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   paddingLeft: "10px",
                   fontFamily: "Arial",
                 }}
@@ -182,7 +185,7 @@ export default function Pdf({ data }: { data: any }) {
               </Text>
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontWeight: "medium",
                   paddingLeft: "5px",
                 }}
@@ -209,7 +212,7 @@ export default function Pdf({ data }: { data: any }) {
               >
                 <Text
                   style={{
-                    fontSize: "9px",
+                    fontSize: "10px",
                     fontFamily: "Arial",
                   }}
                 >
@@ -218,7 +221,7 @@ export default function Pdf({ data }: { data: any }) {
 
                 <Text
                   style={{
-                    fontSize: "9px",
+                    fontSize: "10px",
                     paddingLeft: "10px",
                     fontFamily: "Arial",
                   }}
@@ -227,7 +230,7 @@ export default function Pdf({ data }: { data: any }) {
                 </Text>
                 <Text
                   style={{
-                    fontSize: "9px",
+                    fontSize: "10px",
                     fontWeight: "medium",
                     paddingLeft: "5px",
                   }}
@@ -246,7 +249,7 @@ export default function Pdf({ data }: { data: any }) {
               >
                 <Text
                   style={{
-                    fontSize: "9px",
+                    fontSize: "10px",
                     fontFamily: "Arial",
                   }}
                 >
@@ -254,7 +257,7 @@ export default function Pdf({ data }: { data: any }) {
                 </Text>
                 <Text
                   style={{
-                    fontSize: "9px",
+                    fontSize: "10px",
                     paddingLeft: "10px",
                     fontFamily: "Arial",
                   }}
@@ -263,7 +266,7 @@ export default function Pdf({ data }: { data: any }) {
                 </Text>
                 <Text
                   style={{
-                    fontSize: "9px",
+                    fontSize: "10px",
                     fontWeight: "medium",
                     paddingLeft: "5px",
                   }}
@@ -283,7 +286,7 @@ export default function Pdf({ data }: { data: any }) {
             >
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontFamily: "Arial",
                 }}
               >
@@ -292,7 +295,7 @@ export default function Pdf({ data }: { data: any }) {
 
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   paddingLeft: "10px",
                   fontFamily: "Arial",
                 }}
@@ -322,7 +325,7 @@ export default function Pdf({ data }: { data: any }) {
             >
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontFamily: "Arial",
                 }}
               >
@@ -331,7 +334,7 @@ export default function Pdf({ data }: { data: any }) {
 
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontWeight: "medium",
                   paddingLeft: "10px",
                 }}
@@ -350,7 +353,7 @@ export default function Pdf({ data }: { data: any }) {
             >
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontFamily: "Arial",
                 }}
               >
@@ -359,7 +362,7 @@ export default function Pdf({ data }: { data: any }) {
 
               <Text
                 style={{
-                  fontSize: "9px",
+                  fontSize: "10px",
                   fontFamily: "Arial",
                   paddingLeft: "10px",
                 }}
@@ -369,23 +372,32 @@ export default function Pdf({ data }: { data: any }) {
             </View>
             <Text
               style={{
-                fontSize: "9px",
-                paddingTop: "5px",
+                fontSize: "10px",
+                paddingTop: "10px",
                 paddingLeft: "20px",
               }}
             >
               Use for social, domestic and pleasure purposes and use in person
               by the Policyholder in connection with their business or
-              profession EXCLUDING Commercial Travelling, hiring, carriage of
-              passengers or goods for hire and reward, any purpose in connection
-              with the Motor Trade, racing, pace-making, speed testing or
-              reliability testing or use on any race track, race circuit or toll
-              road without a speed limit including the Nurburgring
+              profession{" "}
+              <Text
+                style={{
+                  fontFamily: "Arial",
+                  fontWeight: "bold",
+                }}
+              >
+                EXCLUDING
+              </Text>{" "}
+              Commercial Travelling, hiring, carriage of passengers or goods for
+              hire and reward, any purpose in connection with the Motor Trade,
+              racing, pace-making, speed testing or reliability testing or use
+              on any race track, race circuit or toll road without a speed limit
+              including the Nurburgring
             </Text>
             <Text
               style={{
-                fontSize: "9px",
-                paddingTop: "10px",
+                fontSize: "10px",
+                paddingTop: "15px",
                 paddingLeft: "20px",
                 fontFamily: "Arial",
               }}
@@ -411,7 +423,7 @@ export default function Pdf({ data }: { data: any }) {
                 alignItems: "center",
                 justifyContent: "space-between",
                 flexDirection: "row",
-                fontSize: "9px",
+                fontSize: "10px",
                 marginTop: "20px",
                 paddingLeft: "30px",
                 paddingRight: "30px",
@@ -430,8 +442,13 @@ export default function Pdf({ data }: { data: any }) {
                   insurers
                 </Text>
               </View>
-              <View>
-                <Image style={{ width: "90px" }} src={pdfsign} />
+              <View
+                style={{
+                  paddingRight: "26px",
+                  border: "1px solid",
+                }}
+              >
+                <Image style={{ width: "90px" }} src="/pdfsign.png" />
               </View>
               <View
                 style={{
@@ -448,11 +465,275 @@ export default function Pdf({ data }: { data: any }) {
                 </Text>
               </View>
             </View>
+            <Text
+              style={{
+                fontSize: "7px",
+                paddingTop: "20px",
+              }}
+            >
+              Note: For full details of the insurance cover reference should be
+              made to the Insurance Document and Schedule. {"\n"}Advice to Third
+              Parties: Nothing contained in this Certificate affects your right
+              as a Third Party to make
+            </Text>
+            <View
+              style={{
+                backgroundColor: "black",
+                width: "100%",
+                height: "3px",
+                marginTop: "15px",
+                padding: "0px 8px",
+                marginLeft: "10px",
+                marginRight: "10px",
+              }}
+            />
+
+            <View
+              style={{
+                width: "100%",
+                display: "flex",
+                alignContent: "center",
+                justifyContent: "center",
+                flexDirection: "row",
+                position: "relative",
+                marginTop: "165px",
+              }}
+            >
+              <View>
+                <Image style={{ width: "160px" }} src="/secondLogo.png" />
+              </View>
+              <View
+                style={{
+                  width: "100%",
+                  position: "absolute",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "flex-end",
+                  marginTop: "15px",
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: "6px",
+                  }}
+                >
+                  Version FRCERT1118
+                </Text>
+              </View>
+            </View>
           </View>
         </Page>
         <Page>
-          <View>
-            <Text>new</Text>
+          <View
+            style={{
+              margin: "20px",
+              padding: "10px",
+              border: "1px solid black",
+              fontSize: "10px",
+            }}
+          >
+            <Text
+              style={{
+                marginTop: "10px",
+              }}
+            >
+              The insurance evidenced by this Certificate of Motor Insurance
+              extends to include the compulsory motor insurance requirements of
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "15px",
+              }}
+            >
+              a) any other member country of the European Union;
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "3px",
+              }}
+            >
+              b) Andorra, Iceland, Liechtenstein, Norway, Serbia and
+              Switzerland.
+            </Text>
+            <Text
+              style={{
+                marginTop: "10px",
+              }}
+            >
+              La police a laquelle ce certificat d'assurance automobile est
+              applicable, inclut egalement les exi-gences obligatoires en
+              matiere d'assurance automobile
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "15px",
+              }}
+            >
+              a) des autres pays membres de la Union Europeenne;
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "3px",
+              }}
+            >
+              b) Andorre, I 'Islande, le Liechtenstein, la Norvege, la Serbie et
+              la Suisse.
+            </Text>
+            <Text
+              style={{
+                marginTop: "10px",
+              }}
+            >
+              Die Police, auf welche sich dieser
+              Kraftfahizeugversicherungsschein bezieht, deckt ebenfalls die
+              Anforderungen der obligatorischen Kraftfahizeugversicherung
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "15px",
+              }}
+            >
+              a) aller anderen Mitgliedsstaaten der Europaeischen Union;
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "3px",
+              }}
+            >
+              b) Andorra, Islandia, Liechtenstein, Norwegen, Serbien and der
+              Schweiz.
+            </Text>
+            <Text
+              style={{
+                marginTop: "10px",
+              }}
+            >
+              La polizza comprovata dal presente certificato di Assicurazione
+              Automobilistica si estende ad includ-ere l'assicurazione
+              auotmobilistica obbligatoria:
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "15px",
+              }}
+            >
+              a) di qualsiasi altro paese membro della Unione Europea;
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "3px",
+              }}
+            >
+              b) Andorra, Islanda, Liechtenstein, Norvegia, Serbia e Svizzera.
+            </Text>
+            <Text
+              style={{
+                marginTop: "10px",
+              }}
+            >
+              La poliza aplicable a este Certificado de Seguro de Automovil se
+              extiende pars incluir los requerim-ientos de seguro de automovil
+              obligatorios en:
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "20px",
+              }}
+            >
+              a) Cualquier otro pais miembro de la Union Europea;
+            </Text>
+            <Text
+              style={{
+                marginLeft: "20px",
+                marginTop: "3px",
+              }}
+            >
+              b) Andorra, Islandia, Liechtenstein, Noruega, Serbia y Suiza.
+            </Text>
+            <Text
+              style={{
+                marginTop: "50px",
+              }}
+            >
+              Advice to third parties: Nothing contained in this Certificate
+              affects your right as a third party to make a claim.
+            </Text>
+            <Text
+              style={{
+                marginTop: "10px",
+                fontFamily: "Arial",
+                fontSize: "10px",
+              }}
+            >
+              IMPORTANT: FOR THE FULL DETAILS OF YOUR INSURANCE, PLEASE READ THE
+              CERTIFICATE OF MOTOR INSURANCE. THE SCHEDULE AND DOCUMENT OF
+              INSURANCE AS ONE DOCUMENT
+            </Text>
+            <Text
+              style={{
+                marginTop: "10px",
+                fontFamily: "Arial",
+                fontSize: "10px",
+              }}
+            >
+              Important - if you have an accident, please report all accidents
+              to us immediately on 0333 305 8120 so we can tell you what to do
+              next and help resolve any claim.
+            </Text>
+            <Text
+              style={{
+                marginTop: "250px",
+                fontSize: "6px",
+                textAlign: "center",
+              }}
+            >
+              Cover has been issued and arranged by First Underwriting Limited
+              under authority granted by Accredited Insurance (Europe) Limited
+              who are authorised and regulated by the Malta Financial Services
+              Authority. First Underwriting Limited is authorised and regulated
+              by the Financial Conduct Authority under FRN 624585.
+            </Text>
+            <View
+              style={{
+                width: "100%",
+                display: "flex",
+                alignContent: "center",
+                justifyContent: "center",
+                flexDirection: "row",
+                position: "relative",
+              }}
+            >
+              <View>
+                <Image style={{ width: "160px" }} src="/secondLogo.png" />
+              </View>
+              <View
+                style={{
+                  width: "100%",
+                  position: "absolute",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "flex-end",
+                  marginTop: "15px",
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: "6px",
+                  }}
+                >
+                  Version FRCERT1118
+                </Text>
+              </View>
+            </View>
           </View>
         </Page>
       </Document>
