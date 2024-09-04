@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
 });
-
+const vehicleRegistrationNumber = "444XDXX45";
+const Insured = "Mohammed Hasham Iqbal";
 export default function Pdf({ data }: { data: any }) {
   return (
     <PDFViewer
@@ -153,7 +154,7 @@ export default function Pdf({ data }: { data: any }) {
                   paddingLeft: "5px",
                 }}
               >
-                444XDX
+                {vehicleRegistrationNumber}
               </Text>
             </View>
             <View
@@ -190,7 +191,7 @@ export default function Pdf({ data }: { data: any }) {
                   paddingLeft: "5px",
                 }}
               >
-                Mohammed Hasham Iqbal
+                {Insured}
               </Text>
             </View>
             <View
