@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1em;
+  margin-top: 1.5em;
   gap: 1em;
 }
 .input__entry {
@@ -43,6 +43,7 @@
   position: absolute;
   top: 0;
   right: 12px;
+  display: none;
 }
 .input__entry__label__input {
   width: 90%;
