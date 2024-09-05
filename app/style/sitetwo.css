@@ -8,6 +8,16 @@
 :before {
   --tw-content: "";
 }
+@font-face {
+  font-family: Icomoon;
+  src: format("embedded-opentype"),
+    url("./fonts/icomoon.1db46404.ttf") format("truetype"),
+    url("./fonts/icomoon.1db46404.ttf") format("woff"), format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
 html {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -1083,7 +1093,7 @@ video {
   vertical-align: super;
 }
 .font-brandon {
-  font-family: Brandon Text;
+  font-family: BrandonText;
 }
 .font-lato {
   font-family: Lato;
@@ -1310,7 +1320,7 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @font-face {
-  font-family: Brandon Text;
+  font-family: BrandonText;
   src: url("./fonts/BrandonText-Light.otf") format("otf"),
     url("./fonts/BrandonText-Light.otf") format("otf");
   font-weight: 300;
@@ -1318,7 +1328,7 @@ video {
   font-display: swap;
 }
 @font-face {
-  font-family: Brandon Text;
+  font-family: BrandonText;
   src: url("./fonts/BrandonText-RegularItalic.otf") format("otf"),
     url("./fonts/BrandonText-RegularItalic.otf") format("otf");
   font-weight: 900;
@@ -1326,65 +1336,11 @@ video {
   font-display: swap;
 }
 @font-face {
-  font-family: Brandon Text;
+  font-family: BrandonText;
   src: url("./fonts/BrandonText-Bold.otf") format("otf"),
     url("./fonts/BrandonText-Bold.otf") format("otf");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Brandon Text;
-  font-weight: 300;
-  font-style: italic;
   font-display: swap;
 }
 [class*=" icon-"],
