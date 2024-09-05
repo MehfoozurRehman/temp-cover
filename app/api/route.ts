@@ -29,3 +29,15 @@ export async function GET(request: Request): Promise<NextResponse> {
     return catchBlockApi(error);
   }
 }
+
+export async function POST(request: Request): Promise<NextResponse> {
+  try {
+    const body = await request.json();
+
+    const form = await prisma.form.create({ data: body });
+
+    return NextResponse.json(form);
+  } catch (error: any) {
+    return catchBlockApi(error);
+  }
+}
