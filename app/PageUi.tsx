@@ -1,6 +1,7 @@
-import "../src/style/bootstrap.min.css"
-import "../src/style/site.css" 
-import "../src/style/sitetwo.css"
+import "@/app/style/bootstrap.min.css";
+import "@/app/style/site.css";
+import "@/app/style/sitetwo.css";
+
 export default function PageUi() {
   return (
     <div>
@@ -1013,7 +1014,10 @@ export default function PageUi() {
                         <h2 className="font-brandon text-xl font-bold text-tempcover-blue-400 md:text-3xl">
                           Download Your Documents
                         </h2>
-                        <img alt="Login" src="https://tempcoverofficial.com/alpha33/data/Accountuser.8ad2f45a.svg" />
+                        <img
+                          alt="Login"
+                          src="https://tempcoverofficial.com/alpha33/data/Accountuser.8ad2f45a.svg"
+                        />
                         <span className="max-w-md text-left md:text-center">
                           <p className="font-lato text-sm md:text-center"></p>
                         </span>
