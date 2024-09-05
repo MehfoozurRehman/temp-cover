@@ -1,17 +1,26 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 .from__main__container {
   width: 100vw;
   background-image: url(../../public/form.png);
   background-repeat: no-repeat;
-  height: 100vh;
+  // height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.form__warper {
+.from__main__container__upper {
+  width: 100%;
   width: 100%;
   max-width: 750px;
+  padding: 2em;
+}
+.form__warper {
   margin: 0 auto;
   background-color: white;
   border-radius: 50px;
@@ -60,4 +69,46 @@
 }
 .input__entry__label__input::placeholder {
   font-size: 12px;
+}
+.input__entry__label__input__text__area {
+  width: 100%;
+  outline: none;
+  border-radius: 12px;
+  resize: none;
+  height: 200px;
+  border: none;
+  background-color: #f8f8f8;
+  margin-top: 12px;
+  padding: 1.5em;
+}
+// .input__entry__label__input__text__area::placeholder {
+//   padding: 1em;
+// }
+.register__button {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5f6a9a;
+  color: white;
+  border-radius: 60px;
+  margin-top: 2.5em;
+}
+@media (max-width: 650px) {
+  .form__input__warper {
+    flex-direction: column;
+  }
+  .input__entry {
+    width: 100%;
+  }
+  .input__entry__label__input {
+    width: 100%;
+  }
+  .form__warper {
+    padding: 1em;
+  }
+  .from__main__container__upper {
+    padding: 1em;
+  }
 }
