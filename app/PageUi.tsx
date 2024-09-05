@@ -1,4 +1,3 @@
-import "@/app/style/bootstrap.min.css";
 import "@/app/style/site.css";
 import "@/app/style/sitetwo.css";
 
