@@ -21,7 +21,7 @@ type Policy {
   effectiveDate       DateTime?
   expirationDate      DateTime?
   reasonForIssue      String?
-  premimum            Float?
+  premium             Float?
   registrationNo      String?
   vehicleValue        Float?
   vehicleDetails      String?
