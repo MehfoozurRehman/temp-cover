@@ -102,6 +102,67 @@
   color: white;
   border-radius: 60px;
   margin-top: 2.5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.register__button:hover {
+  background-color: #5f6a9aa6;
+}
+
+// popup style
+.popup {
+  gap: 2em;
+}
+.from__main__container:has(.popup) {
+  align-items: center;
+}
+.form__warper__icon {
+  background-color: #f8f8f8;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.form__warper__row {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.form__warper__btn {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5f6a9a;
+  color: white;
+  border-radius: 60px;
+
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.form__warper__btn:hover {
+  background-color: #5f6a9aa6;
+}
+.form__warper__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.btn__secondary {
+  background-color: white;
+  color: #5f6a9a;
+  border: 1px solid #5f6a9a;
+  transition: all 0.3s ease-in-out;
+}
+.btn__secondary:hover {
+  background-color: #5f6a9a;
+  color: white;
 }
 @media (max-width: 650px) {
   .form__input__warper {
