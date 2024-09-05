@@ -41,6 +41,18 @@ export default function Form() {
               <div className="input__entry__error">fill the input filed</div>
             </div>
           </div>
+          <div className="form__input__warper">
+            <div className="input__entry">
+              <div className="input__entry__label">Expiration Date</div>
+              <input className="input__entry__label__input" type="date" />
+              <div className="input__entry__error">fill the input filed</div>
+            </div>
+            <div className="input__entry">
+              <div className="input__entry__label">Reason For Issue</div>
+              <input className="input__entry__label__input" type="text" />
+              <div className="input__entry__error">fill the input filed</div>
+            </div>
+          </div>
         </form>
       </div>
     </>
