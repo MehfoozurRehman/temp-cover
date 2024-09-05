@@ -236,7 +236,7 @@ export const NotionMagicLinkEmail = ({
             flexDirection: "column",
             border: "2px solid rgb(35, 67, 151)",
             borderRadius: "5px",
-            margin: "10px 15px 20px",
+            margin: "10px auto 20px",
             padding: "12px 0",
 
             maxWidth: "100%",
@@ -579,7 +579,7 @@ export const NotionMagicLinkEmail = ({
             flexDirection: "column",
 
             borderRadius: "5px",
-            margin: "80px 15px 20px",
+            margin: "80px auto 20px",
 
             maxWidth: "100%",
             width: "600px",
@@ -697,6 +697,51 @@ export const NotionMagicLinkEmail = ({
         >
           temcover
         </Text>
+
+        <span
+          style={{
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "20px 0",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          Get the updates
+        </span>
+        <span
+          style={{
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "0px 0 30px",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "5px",
+          }}
+        >
+          <Img src="/static/twiter.png" alt="Vercel" className="my-0 mx-auto" />
+          <Img
+            src="/static/facebook.png"
+            alt="Vercel"
+            className="my-0 mx-auto"
+          />
+          <Img
+            src="/static/youtube.png"
+            alt="Vercel"
+            className="my-0 mx-auto"
+          />
+          <Img
+            src="/static/linkedin.png"
+            alt="Vercel"
+            className="my-0 mx-auto"
+          />
+          <Img src="/static/email.png" alt="Vercel" className="my-0 mx-auto" />
+        </span>
         <span
           style={{
             width: "100%",
@@ -720,6 +765,91 @@ export const NotionMagicLinkEmail = ({
           misuse. Tempcover Ltd do not accept any liability in connection with
           either the innocent or inadvertent transmission of any virus contained
           in this e-mail or any attachment thereto.
+        </span>
+
+        <span
+          style={{
+            color: "rgb(35,67,151)",
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "16px 0 2px",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          TEMPCOVER LTD
+        </span>
+        <span
+          style={{
+            color: "rgb(35,67,151)",
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "2px 0",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          REGISTERED IN ENGLAND NO.9923259
+        </span>
+        <span
+          style={{
+            color: "rgb(35,67,151)",
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "2px 0",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          REGISTERED OFFICE: 2ndFLOOR ADMIRAL HOUSE, HARLINGTON WAY, FLEET,
+        </span>
+        <span
+          style={{
+            color: "rgb(35,67,151)",
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "2px 0",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          HAMPSHIRE, GU51 4BB
+        </span>
+        <span
+          style={{
+            color: "rgb(35,67,151)",
+            textAlign: "center",
+            width: "100%",
+            fontSize: "14px",
+            padding: "2px 0 5px",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Link
+            href="https://www.tempcover.com/terms-conditions"
+            target="_blank"
+            style={{ color: "#1155cc", padding: "0 4px" }}
+          >
+            Terms
+          </Link>
+          |
+          <Link
+            href="https://www.tempcover.com/privacy-notice"
+            target="_blank"
+            style={{ color: "#1155cc", padding: "0 4px" }}
+          >
+            Privacy
+          </Link>
         </span>
       </Container>
     </Body>
