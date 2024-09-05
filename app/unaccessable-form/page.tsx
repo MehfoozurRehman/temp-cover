@@ -1,6 +1,7 @@
 import "@/app/style/form.scss";
 
 import Image from "next/image";
+import { toast } from "react-toastify";
 import { useState } from "react";
 
 export default function Form() {
@@ -26,10 +27,54 @@ export default function Form() {
     },
   });
 
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Form saved");
+      } else {
+        toast.error("Form not saved");
+      }
+
+      setFormData({
+        policy: {
+          dateIssued: "",
+          effectiveDate: "",
+          expirationDate: "",
+          reasonForIssue: "",
+          premium: "",
+          registrationNo: "",
+          vehicleValue: "",
+          vehicleDetails: "",
+          compulsoryExcessFee: "",
+          voluntaryExcessFee: "",
+        },
+        certificate: {
+          number: "",
+          insured: "",
+          effectiveDate: "",
+          expirationDate: "",
+          registrationNo: "",
+        },
+      });
+    } catch (e) {
+      toast.error("Form not saved");
+    }
+  };
+
   return (
     <div className="from__main__container">
       <div className="from__main__container__upper">
-        <form className="form__warper">
+        <form className="form__warper" onSubmit={handleSubmit}>
           <div className="form__warper__logo">
             <Image width={250} height={70} src="/secondLogo.png" alt="logo" />
           </div>
