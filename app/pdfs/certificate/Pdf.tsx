@@ -692,7 +692,7 @@ export default function Pdf({ data }: { data: any }) {
             </Text>
             <Text
               style={{
-                marginTop: "250px",
+                marginTop: "220px",
                 fontSize: "6px",
                 textAlign: "center",
               }}
