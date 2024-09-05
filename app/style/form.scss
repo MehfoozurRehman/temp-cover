@@ -5,19 +5,31 @@
 }
 .from__main__container {
   width: 100vw;
+  height: 100vh;
+  padding: 2em;
   background-image: url(../../public/form.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  overflow-y: auto;
+}
+.form__warper__logo img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 2em;
+}
+.form__input__heading {
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
 }
 .from__main__container__upper {
   width: 100%;
   width: 100%;
   max-width: 750px;
-  padding: 2em;
 }
 .form__warper {
   margin: 0 auto;
@@ -54,7 +66,7 @@
   display: none;
 }
 .input__entry__label__input {
-  width: 90%;
+  width: 100%;
   background-color: #f8f8f8;
   border: none;
   padding: 1em 1.5em;
