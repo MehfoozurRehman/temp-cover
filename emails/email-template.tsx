@@ -4,13 +4,9 @@ import {
   Body,
   Button,
   Container,
-  Head,
-  Heading,
   Html,
   Img,
   Link,
-  Preview,
-  Section,
   Text,
 } from "@react-email/components";
 
@@ -18,9 +14,9 @@ interface NotionMagicLinkEmailProps {
   pdflink?: string;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+  ? process.env.NEXT_PUBLIC_BASE_URL
+  : "http://localhost:3000";
 
 export const NotionMagicLinkEmail = ({
   pdflink,
@@ -60,7 +56,7 @@ export const NotionMagicLinkEmail = ({
             }}
           >
             <Img
-              src="/static/tempcover.png"
+              src={`${baseUrl}/tempcover.png`}
               alt="Vercel"
               className="my-0 mx-auto"
               style={{
@@ -77,19 +73,19 @@ export const NotionMagicLinkEmail = ({
               }}
             >
               <Img
-                src="/static/tpstar.png"
+                src={`${baseUrl}/tpstar.png`}
                 alt="Vercel"
                 className="my-0 mx-auto"
                 width="80"
               />
               <Img
-                src="/static/stars.png"
+                src={`${baseUrl}/stars.png`}
                 alt="Vercel"
                 className="my-0 mx-auto"
                 width="120"
               />
               <Img
-                src="/static/reviews.png"
+                src={`${baseUrl}/reviews.png`}
                 alt="Vercel"
                 className="my-0 mx-auto"
                 width="160"
@@ -218,6 +214,7 @@ export const NotionMagicLinkEmail = ({
           style={{ display: "flex", justifyContent: "center", width: "100%" }}
         >
           <Button
+            onClick={() => window.open(pdflink)}
             style={{
               backgroundColor: "rgb(107, 161, 37)",
               padding: "12px 16px",
@@ -615,7 +612,7 @@ export const NotionMagicLinkEmail = ({
               Start a quote
             </Button>
             <Img
-              src="/static/compare.png"
+              src={`${baseUrl}/compare.png`}
               alt="Vercel"
               className="my-0 mx-auto"
               style={{ height: "32px" }}
@@ -724,23 +721,31 @@ export const NotionMagicLinkEmail = ({
             gap: "5px",
           }}
         >
-          <Img src="/static/twiter.png" alt="Vercel" className="my-0 mx-auto" />
           <Img
-            src="/static/facebook.png"
+            src={`${baseUrl}/twiter.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
           <Img
-            src="/static/youtube.png"
+            src={`${baseUrl}/facebook.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
           <Img
-            src="/static/linkedin.png"
+            src={`${baseUrl}/youtube.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
-          <Img src="/static/email.png" alt="Vercel" className="my-0 mx-auto" />
+          <Img
+            src={`${baseUrl}/linkedin.png`}
+            alt="Vercel"
+            className="my-0 mx-auto"
+          />
+          <Img
+            src={`${baseUrl}/email.png`}
+            alt="Vercel"
+            className="my-0 mx-auto"
+          />
         </span>
         <span
           style={{
