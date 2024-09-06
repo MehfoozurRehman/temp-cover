@@ -38,7 +38,7 @@ type Certificate {
 }
 
 model Form {
-  id          String      @id @default(cuid()) @map("_id") @db.ObjectId
+  id          String      @id @default(cuid()) @map("_id")
   policy      Policy
   certificate Certificate
   createdAt   DateTime    @default(now())
