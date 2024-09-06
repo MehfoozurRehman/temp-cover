@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Document,
   Font,
@@ -11,9 +12,6 @@ import {
 } from "@react-pdf/renderer";
 
 import React from "react";
-// import arialbd from "../../../public/arialbd.ttf";
-// import firstlogo from "../../assets/firstlogo.png";
-// import pdfsign from "../../assets/pdfsign.png";
 
 Font.register({
   family: "Arial",
