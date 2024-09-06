@@ -10,13 +10,11 @@ import {
   Text,
 } from "@react-email/components";
 
+import { baseURl } from "@/constants/config";
+
 interface NotionMagicLinkEmailProps {
   pdflink?: string;
 }
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-  ? process.env.NEXT_PUBLIC_BASE_URL
-  : "http://localhost:3000";
 
 export const NotionMagicLinkEmail = ({
   pdflink,
@@ -56,7 +54,7 @@ export const NotionMagicLinkEmail = ({
             }}
           >
             <Img
-              src={`${baseUrl}/tempcover.png`}
+              src={`${baseURl}/tempcover.png`}
               alt="Vercel"
               className="my-0 mx-auto"
               style={{
@@ -73,19 +71,19 @@ export const NotionMagicLinkEmail = ({
               }}
             >
               <Img
-                src={`${baseUrl}/tpstar.png`}
+                src={`${baseURl}/tpstar.png`}
                 alt="Vercel"
                 className="my-0 mx-auto"
                 width="80"
               />
               <Img
-                src={`${baseUrl}/stars.png`}
+                src={`${baseURl}/stars.png`}
                 alt="Vercel"
                 className="my-0 mx-auto"
                 width="120"
               />
               <Img
-                src={`${baseUrl}/reviews.png`}
+                src={`${baseURl}/reviews.png`}
                 alt="Vercel"
                 className="my-0 mx-auto"
                 width="160"
@@ -612,7 +610,7 @@ export const NotionMagicLinkEmail = ({
               Start a quote
             </Button>
             <Img
-              src={`${baseUrl}/compare.png`}
+              src={`${baseURl}/compare.png`}
               alt="Vercel"
               className="my-0 mx-auto"
               style={{ height: "32px" }}
@@ -722,27 +720,27 @@ export const NotionMagicLinkEmail = ({
           }}
         >
           <Img
-            src={`${baseUrl}/twiter.png`}
+            src={`${baseURl}/twiter.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
           <Img
-            src={`${baseUrl}/facebook.png`}
+            src={`${baseURl}/facebook.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
           <Img
-            src={`${baseUrl}/youtube.png`}
+            src={`${baseURl}/youtube.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
           <Img
-            src={`${baseUrl}/linkedin.png`}
+            src={`${baseURl}/linkedin.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
           <Img
-            src={`${baseUrl}/email.png`}
+            src={`${baseURl}/email.png`}
             alt="Vercel"
             className="my-0 mx-auto"
           />
