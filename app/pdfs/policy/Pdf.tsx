@@ -12,6 +12,7 @@ import {
 } from "@react-pdf/renderer";
 
 import React from "react";
+import dayjs from "dayjs";
 
 Font.register({
   family: "Arial",
@@ -29,7 +30,25 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Pdf({ data }: { data: any }) {
+export default function Pdf({
+  data,
+}: {
+  data: {
+    number: string;
+    insured: string;
+    description: string;
+    dateIssued: any;
+    effectiveDate: any;
+    expirationDate: any;
+    reasonForIssue: string;
+    premium: number;
+    registrationNo: string;
+    vehicleValue: number;
+    vehicleDetails: string;
+    compulsoryExcessFee: number;
+    voluntaryExcessFee: number;
+  };
+}) {
   return (
     <PDFViewer
       style={{
@@ -142,7 +161,7 @@ export default function Pdf({ data }: { data: any }) {
                           fontWeight: "normal",
                         }}
                       >
-                        TCV-MOT-1739398
+                        {data.number}
                       </Text>
                     </View>
                     <View
@@ -164,11 +183,10 @@ export default function Pdf({ data }: { data: any }) {
                           fontWeight: "normal",
                         }}
                       >
-                        10 Aug 2024
+                        {dayjs(data.dateIssued).format("DD MMM YYYY")}
                       </Text>
                     </View>
                   </View>
-
                   <View
                     style={{
                       display: "flex",
@@ -191,7 +209,7 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "normal",
                       }}
                     >
-                      Mohammed Hasham Iqba
+                      {data.insured}
                     </Text>
                   </View>
                   <View
@@ -202,15 +220,18 @@ export default function Pdf({ data }: { data: any }) {
                       padding: "5px",
                     }}
                   >
-                    <Text
-                      style={{
-                        fontFamily: "Arial",
-                        fontWeight: "bold",
-                        marginRight: "5px",
-                      }}
-                    >
-                      5 Park Lane{"\n"}Peterborough {"\n"}PE1 5JH
-                    </Text>
+                    {data.description?.split("\n").map((item, index) => (
+                      <Text
+                        key={index}
+                        style={{
+                          fontFamily: "Arial",
+                          fontWeight: "bold",
+                          marginRight: "5px",
+                        }}
+                      >
+                        {item}
+                      </Text>
+                    ))}
                   </View>
                 </View>
                 <View
@@ -248,7 +269,6 @@ export default function Pdf({ data }: { data: any }) {
                       </Text>
                     </View>
                   </View>
-
                   <View
                     style={{
                       borderBottom: "1.2px solid black",
@@ -272,7 +292,7 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "normal",
                       }}
                     >
-                      10 August 2024 22:03
+                      {dayjs(data.effectiveDate).format("DD MMM YYYY HH:mm")}
                     </Text>
                   </View>
                   <View
@@ -298,7 +318,7 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "normal",
                       }}
                     >
-                      10 August 2024 22:03
+                      {dayjs(data.expirationDate).format("DD MMM YYYY HH:mm")}
                     </Text>
                   </View>
                   <View
@@ -324,7 +344,7 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "normal",
                       }}
                     >
-                      New Business
+                      {data.reasonForIssue}
                     </Text>
                   </View>
                   <View
@@ -349,7 +369,7 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "normal",
                       }}
                     >
-                      £198.55
+                      £{data.premium?.toLocaleString()}
                     </Text>
                   </View>
                 </View>
@@ -414,7 +434,7 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "normal",
                       }}
                     >
-                      T444XDX
+                      {data.registrationNo}
                     </Text>
                   </View>
                 </View>
@@ -469,14 +489,14 @@ export default function Pdf({ data }: { data: any }) {
                       fontWeight: "bold",
                     }}
                   >
-                    Policy Number:
+                    Vehicle Value:
                   </Text>
                   <Text
                     style={{
                       fontWeight: "normal",
                     }}
                   >
-                    TCV-MOT-1739398
+                    {data.vehicleValue?.toLocaleString()}
                   </Text>
                 </View>
                 <View
@@ -498,14 +518,11 @@ export default function Pdf({ data }: { data: any }) {
                       fontWeight: "normal",
                     }}
                   >
-                    MERCEDES-BENZ A 45 AMG 4MATIC
+                    {data.vehicleDetails}
                   </Text>
                 </View>
               </View>
             </View>
-
-            {/* horizontal line */}
-
             <View
               style={{
                 marginTop: "10px",
@@ -514,9 +531,6 @@ export default function Pdf({ data }: { data: any }) {
                 backgroundColor: "black",
               }}
             ></View>
-
-            {/* 2nd table */}
-
             <View
               style={{
                 border: "1.2px solid black",
@@ -562,7 +576,7 @@ export default function Pdf({ data }: { data: any }) {
                     >
                       Compulsory Excess Amount
                     </Text>
-                    <Text>£1250.00</Text>
+                    <Text>£{data.compulsoryExcessFee?.toLocaleString()}</Text>
                   </View>
                   <View
                     style={{
@@ -579,7 +593,7 @@ export default function Pdf({ data }: { data: any }) {
                     >
                       Compulsory Excess Amount
                     </Text>
-                    <Text>£1250.00</Text>
+                    <Text>£{data.compulsoryExcessFee?.toLocaleString()}</Text>
                   </View>
                   <View
                     style={{
@@ -613,7 +627,10 @@ export default function Pdf({ data }: { data: any }) {
                         fontWeight: "bold",
                       }}
                     >
-                      £1250.00
+                      £
+                      {(
+                        data.voluntaryExcessFee + data.compulsoryExcessFee
+                      )?.toLocaleString()}
                     </Text>
                   </View>
                 </View>
