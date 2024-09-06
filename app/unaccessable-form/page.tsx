@@ -3,6 +3,7 @@
 import "@/app/style/form.scss";
 
 import Image from "next/image";
+import { baseURl } from "@/constants/config";
 import { toast } from "react-toastify";
 import { useState } from "react";
 
@@ -127,13 +128,11 @@ export default function Form() {
   };
 
   const handleDownloadCertificate = async () => {
-    window.open(
-      process.env.NEXT_PUBLIC_BASE_URL + `/pdfs/certificate?id=${formId}`
-    );
+    window.open(baseURl + `/pdfs/certificate?id=${formId}`);
   };
 
   const handleDownloadPolicy = async () => {
-    window.open(process.env.NEXT_PUBLIC_BASE_URL + `/pdfs/policy?id=${formId}`);
+    window.open(baseURl + `/pdfs/policy?id=${formId}`);
   };
 
   const handleSwitchToEmail = async () => {
