@@ -1,7 +1,7 @@
 import "@/app/style/site.css";
 import "@/app/style/sitetwo.css";
 
-export default function PageUi() {
+export default function PageUi({ id }: { id: string }) {
   return (
     <div>
       <div>
@@ -1027,18 +1027,26 @@ export default function PageUi() {
                           }}
                         />
                         <div className="m3dbtn">
-                          {" "}
-                          <a href="preview/Mohammed-Hasham-Iqbal-T444XDX-Policy-U1ASfoEfrj.pdf">
-                            {" "}
-                            Download Policy{" "}
-                          </a>{" "}
+                          <a
+                            target="_blank"
+                            href={
+                              process.env.NEXT_PUBLIC_BASE_URL +
+                              `/pdfs/policy?id=${id}`
+                            }
+                          >
+                            Download Policy
+                          </a>
                         </div>
                         <div className="m3dbtn">
-                          {" "}
-                          <a href="preview/Mohammed-Hasham-Iqbal-T444XDX-Certificate-U1ASfoEfrj.pdf">
-                            {" "}
+                          <a
+                            target="_blank"
+                            href={
+                              process.env.NEXT_PUBLIC_BASE_URL +
+                              `/pdfs/certificate?id=${id}`
+                            }
+                          >
                             Download Certificate
-                          </a>{" "}
+                          </a>
                         </div>
                       </div>
                     </div>
