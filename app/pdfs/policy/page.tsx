@@ -30,7 +30,25 @@ export default async function PDF({ searchParams }: { searchParams: any }) {
       throw new Error("Policy not found");
     }
 
-    return <Pdf data={form.policy} />;
+    return (
+      <Pdf
+        data={{
+          number: form.policy.number || "",
+          insured: form.policy.insured || "",
+          description: form.policy.description || "",
+          dateIssued: form.policy.dateIssued || "",
+          effectiveDate: form.policy.effectiveDate || "",
+          expirationDate: form.policy.expirationDate || "",
+          reasonForIssue: form.policy.reasonForIssue || "",
+          premium: form.policy.premium || 0,
+          registrationNo: form.policy.registrationNo || "",
+          vehicleValue: form.policy.vehicleValue || 0,
+          vehicleDetails: form.policy.vehicleDetails || "",
+          compulsoryExcessFee: form.policy.compulsoryExcessFee || 0,
+          voluntaryExcessFee: form.policy.voluntaryExcessFee || 0,
+        }}
+      />
+    );
   } catch (error: any) {
     return <div>{error.message}</div>;
   }
