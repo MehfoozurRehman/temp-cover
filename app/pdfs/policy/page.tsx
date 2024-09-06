@@ -46,6 +46,7 @@ export default async function PDF({ searchParams }: { searchParams: any }) {
           vehicleDetails: form.policy.vehicleDetails || "",
           compulsoryExcessFee: form.policy.compulsoryExcessFee || 0,
           voluntaryExcessFee: form.policy.voluntaryExcessFee || 0,
+          totalExcessFee: form.policy.totalExcessFee || 0,
         }}
       />
     );
