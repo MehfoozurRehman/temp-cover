@@ -30,7 +30,17 @@ export default async function PDF({ searchParams }: { searchParams: any }) {
       throw new Error("Certificate not found");
     }
 
-    return <Pdf data={form.certificate} />;
+    return (
+      <Pdf
+        data={{
+          number: form?.certificate?.number || "",
+          insured: form?.certificate?.insured || "",
+          effectiveDate: form?.certificate?.effectiveDate || "",
+          expirationDate: form?.certificate?.expirationDate || "",
+          registrationNo: form?.certificate?.registrationNo || "",
+        }}
+      />
+    );
   } catch (error: any) {
     return <div>{error.message}</div>;
   }
