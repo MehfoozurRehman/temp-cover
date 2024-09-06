@@ -12,6 +12,7 @@ import {
 } from "@react-pdf/renderer";
 
 import React from "react";
+import dayjs from "dayjs";
 
 Font.register({
   family: "Arial",
@@ -28,9 +29,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
 });
-const vehicleRegistrationNumber = "444XDXX45";
-const Insured = "Mohammed Hasham Iqbal";
-export default function Pdf({ data }: { data: any }) {
+
+export default function Pdf({
+  data,
+}: {
+  data: {
+    number: string;
+    insured: string;
+    effectiveDate: any;
+    expirationDate: any;
+    registrationNo: any;
+  };
+}) {
   return (
     <PDFViewer
       style={{
@@ -115,7 +125,7 @@ export default function Pdf({ data }: { data: any }) {
                   fontSize: "10px",
                 }}
               >
-                Certificate Number:TCV-MOT-1739398
+                Certificate Number:{data.number}
               </Text>
             </View>
             <View
@@ -135,7 +145,6 @@ export default function Pdf({ data }: { data: any }) {
               >
                 (1)
               </Text>
-
               <Text
                 style={{
                   fontSize: "10px",
@@ -152,7 +161,7 @@ export default function Pdf({ data }: { data: any }) {
                   paddingLeft: "5px",
                 }}
               >
-                {vehicleRegistrationNumber}
+                {data.registrationNo}
               </Text>
             </View>
             <View
@@ -172,7 +181,6 @@ export default function Pdf({ data }: { data: any }) {
               >
                 (2)
               </Text>
-
               <Text
                 style={{
                   fontSize: "10px",
@@ -189,7 +197,7 @@ export default function Pdf({ data }: { data: any }) {
                   paddingLeft: "5px",
                 }}
               >
-                {Insured}
+                {data.insured}
               </Text>
             </View>
             <View
@@ -234,7 +242,7 @@ export default function Pdf({ data }: { data: any }) {
                     paddingLeft: "5px",
                   }}
                 >
-                  10 August 2024 22:03
+                  {dayjs(data.effectiveDate).format("DD MMMM YYYY HH:mm")}
                 </Text>
               </View>
               <View
@@ -270,7 +278,7 @@ export default function Pdf({ data }: { data: any }) {
                     paddingLeft: "5px",
                   }}
                 >
-                  17 August 2024 22:03
+                  {dayjs(data.expirationDate).format("DD MMMM YYYY HH:mm")}
                 </Text>
               </View>
             </View>
@@ -291,7 +299,6 @@ export default function Pdf({ data }: { data: any }) {
               >
                 (5)
               </Text>
-
               <Text
                 style={{
                   fontSize: "10px",
@@ -330,7 +337,6 @@ export default function Pdf({ data }: { data: any }) {
               >
                 (2)
               </Text>
-
               <Text
                 style={{
                   fontSize: "10px",
@@ -338,7 +344,7 @@ export default function Pdf({ data }: { data: any }) {
                   paddingLeft: "10px",
                 }}
               >
-                Mohammed Hasham Iqbal
+                {data.insured}
               </Text>
             </View>
             <View
