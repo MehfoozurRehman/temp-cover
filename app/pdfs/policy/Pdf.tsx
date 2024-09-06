@@ -215,7 +215,7 @@ export default function Pdf({
                   <View
                     style={{
                       display: "flex",
-                      flexDirection: "row",
+                      flexDirection: "column",
                       borderTop: "1.2px solid black",
                       padding: "5px",
                     }}
@@ -591,9 +591,9 @@ export default function Pdf({
                         width: "70%",
                       }}
                     >
-                      Compulsory Excess Amount
+                      Voluntary Excess Amount
                     </Text>
-                    <Text>£{data.compulsoryExcessFee?.toLocaleString()}</Text>
+                    <Text>£{data.voluntaryExcessFee?.toLocaleString()}</Text>
                   </View>
                   <View
                     style={{
