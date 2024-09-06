@@ -27,6 +27,7 @@ type Policy {
   vehicleDetails      String?
   compulsoryExcessFee Float?
   voluntaryExcessFee  Float?
+  totalExcessFee      Float?
 }
 
 type Certificate {
