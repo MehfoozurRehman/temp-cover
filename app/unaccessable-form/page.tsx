@@ -34,6 +34,7 @@ export default function Form() {
       vehicleDetails: "",
       compulsoryExcessFee: "",
       voluntaryExcessFee: "",
+      totalExcessFee: "",
       description: "",
       insured: "",
     },
@@ -64,6 +65,7 @@ export default function Form() {
           vehicleValue: parseFloat(formData.policy.vehicleValue),
           compulsoryExcessFee: parseFloat(formData.policy.compulsoryExcessFee),
           voluntaryExcessFee: parseFloat(formData.policy.voluntaryExcessFee),
+          totalExcessFee: parseFloat(formData.policy.totalExcessFee),
         },
         certificate: {
           ...formData.certificate,
@@ -100,6 +102,7 @@ export default function Form() {
             vehicleDetails: "",
             compulsoryExcessFee: "",
             voluntaryExcessFee: "",
+            totalExcessFee: "",
             description: "",
             insured: "",
           },
@@ -382,6 +385,26 @@ export default function Form() {
                       policy: {
                         ...formData.policy,
                         voluntaryExcessFee: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+            </div>
+            <div className="form__input__warper">
+              <div className="input__entry">
+                <div className="input__entry__label">Total Excess Fee</div>
+                <input
+                  className="input__entry__label__input"
+                  type="number"
+                  placeholder="Enter Voluntary Excess Fee"
+                  value={formData.policy.totalExcessFee}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      policy: {
+                        ...formData.policy,
+                        totalExcessFee: e.target.value,
                       },
                     })
                   }
