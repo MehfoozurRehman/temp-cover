@@ -21,6 +21,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^10.0.5",
+    "resend": "^4.0.0",
     "sass": "^1.78.0",
     "sharp": "0.32.6"
   },
