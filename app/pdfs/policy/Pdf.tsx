@@ -47,6 +47,7 @@ export default function Pdf({
     vehicleDetails: string;
     compulsoryExcessFee: number;
     voluntaryExcessFee: number;
+    totalExcessFee: number;
   };
 }) {
   return (
@@ -627,10 +628,7 @@ export default function Pdf({
                         fontWeight: "bold",
                       }}
                     >
-                      £
-                      {(
-                        data.voluntaryExcessFee + data.compulsoryExcessFee
-                      )?.toLocaleString()}
+                      £{data.totalExcessFee?.toLocaleString()}
                     </Text>
                   </View>
                 </View>
