@@ -1,6 +1,8 @@
 import "@/app/style/site.css";
 import "@/app/style/sitetwo.css";
 
+import { baseURl } from "@/constants/config";
+
 export default function PageUi({ id }: { id: string }) {
   return (
     <div>
@@ -1029,10 +1031,7 @@ export default function PageUi({ id }: { id: string }) {
                         <div className="m3dbtn">
                           <a
                             target="_blank"
-                            href={
-                              process.env.NEXT_PUBLIC_BASE_URL +
-                              `/pdfs/policy?id=${id}`
-                            }
+                            href={baseURl + `/pdfs/policy?id=${id}`}
                           >
                             Download Policy
                           </a>
@@ -1040,10 +1039,7 @@ export default function PageUi({ id }: { id: string }) {
                         <div className="m3dbtn">
                           <a
                             target="_blank"
-                            href={
-                              process.env.NEXT_PUBLIC_BASE_URL +
-                              `/pdfs/certificate?id=${id}`
-                            }
+                            href={baseURl + `/pdfs/certificate?id=${id}`}
                           >
                             Download Certificate
                           </a>
