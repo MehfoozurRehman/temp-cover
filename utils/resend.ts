@@ -11,7 +11,7 @@ async function sendEmail({
   react,
 }: {
   from: string;
-  to: string;
+  to: string | string[];
   subject: string;
   react: any;
 }) {
