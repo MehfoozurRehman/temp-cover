@@ -10,8 +10,6 @@ export async function POST(request: Request): Promise<NextResponse> {
   try {
     const { email, formId } = await request.json();
 
-    console.log(email, formId, "email, formId");
-
     if (!email || !formId) {
       return NextResponse.json({ error: "Email and formId are required" });
     }
@@ -33,8 +31,6 @@ export async function POST(request: Request): Promise<NextResponse> {
       },
     });
 
-    console.log(formData, "formData");
-
     if (!formData) {
       return NextResponse.json({ error: "Form not found" });
     }
@@ -52,7 +48,10 @@ export async function POST(request: Request): Promise<NextResponse> {
       }),
     });
 
-    console.log(res, "res");
+    if (res.error) {
+      console.error(res.error);
+      return NextResponse.json({ error: res.error });
+    }
 
     return NextResponse.json({ message: "Email sent" });
   } catch (error: any) {
