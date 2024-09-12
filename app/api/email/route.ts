@@ -32,10 +32,10 @@ export async function POST(request: Request): Promise<NextResponse> {
     });
 
     if (!formData) {
-      return NextResponse.json({ message: "Form not found" });
+      return NextResponse.json({ error: "Form not found" });
     }
 
-    sendEmail({
+    const res = await sendEmail({
       from: "Acme <onboarding@resend.dev>",
       to: ["your-email@example.com", email],
       subject: "Your policy details from temp cover",
@@ -44,6 +44,8 @@ export async function POST(request: Request): Promise<NextResponse> {
         ...formData,
       }),
     });
+
+    console.log(res, "res");
 
     return NextResponse.json({ message: "Email sent" });
   } catch (error: any) {
