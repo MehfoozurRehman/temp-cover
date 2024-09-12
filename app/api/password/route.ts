@@ -39,3 +39,37 @@ export async function POST(request: Request): Promise<NextResponse> {
   }
 }
 
+export async function PUT(request: Request): Promise<NextResponse> {
+  try {
+    const { oldPassword, newPassword } = await request.json();
+
+    if (!oldPassword || !newPassword) {
+      return NextResponse.json({
+        message: "Old and new password are required",
+      });
+    }
+
+    const checkPassword = await prisma.auth.findFirst({
+      where: {
+        password: oldPassword,
+      },
+    });
+
+    if (!checkPassword) {
+      return NextResponse.json({ error: "Old password is incorrect" });
+    }
+
+    await prisma.auth.updateMany({
+      where: {
+        password: oldPassword,
+      },
+      data: {
+        password: newPassword,
+      },
+    });
+
+    return NextResponse.json({ message: "Password changed" });
+  } catch (error: any) {
+    return catchBlockApi(error);
+  }
+}
