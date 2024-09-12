@@ -148,9 +148,11 @@ export default function Form() {
 
         setActiveStep(steps.generated);
 
-        const { id } = await response.json();
+        const json = await response.json();
 
-        setFormId(id);
+        console.log(json, "json");
+
+        setFormId(json.id);
       } else {
         toast.error("Form not saved");
       }
@@ -183,7 +185,7 @@ export default function Form() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: toEmail }),
+        body: JSON.stringify({ email: toEmail, formId }),
       });
 
       if (response.ok) {
