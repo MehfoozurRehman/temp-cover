@@ -36,8 +36,6 @@ export async function POST(request: Request): Promise<NextResponse> {
 
     const form = await prisma.form.create({ data: body });
 
-    console.log(form, "form");
-
     return NextResponse.json(form);
   } catch (error: any) {
     return catchBlockApi(error);
