@@ -150,8 +150,6 @@ export default function Form() {
 
         const json = await response.json();
 
-        console.log(json, "json");
-
         setFormId(json.id);
       } else {
         toast.error("Form not saved");
