@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 
 const steps = {
+  auth: 0,
   form: 1,
   generated: 2,
   email: 3,
@@ -16,8 +17,9 @@ const steps = {
 
 export default function Form() {
   const [formId, setFormId] = useState("");
+  const [password, setPassword] = useState("");
   const [toEmail, setToEmail] = useState("");
-  const [activeStep, setActiveStep] = useState(steps.form);
+  const [activeStep, setActiveStep] = useState(steps.auth);
   const [formProcessing, setFormProcessing] = useState(false);
   const [emailProcessing, setEmailProcessing] = useState(false);
 
@@ -44,6 +46,15 @@ export default function Form() {
       effectiveDate: "",
       expirationDate: "",
       registrationNo: "",
+    },
+    email: {
+      duration: "",
+      startDate: "",
+      endDate: "",
+      firstUnderwritingInsurerPremium: "",
+      insurancePremium: "",
+      adminFee: "",
+      totalCharged: "",
     },
   });
 
@@ -75,6 +86,17 @@ export default function Form() {
           expirationDate: new Date(
             formData.certificate.expirationDate
           ).toISOString(),
+        },
+        email: {
+          ...formData.email,
+          startDate: new Date(formData.email.startDate).toISOString(),
+          endDate: new Date(formData.email.endDate).toISOString(),
+          firstUnderwritingInsurerPremium: parseFloat(
+            formData.email.firstUnderwritingInsurerPremium
+          ),
+          insurancePremium: parseFloat(formData.email.insurancePremium),
+          adminFee: parseFloat(formData.email.adminFee),
+          totalCharged: parseFloat(formData.email.totalCharged),
         },
       };
 
@@ -112,6 +134,15 @@ export default function Form() {
             effectiveDate: "",
             expirationDate: "",
             registrationNo: "",
+          },
+          email: {
+            duration: "",
+            startDate: "",
+            endDate: "",
+            firstUnderwritingInsurerPremium: "",
+            insurancePremium: "",
+            adminFee: "",
+            totalCharged: "",
           },
         });
 
@@ -171,14 +202,79 @@ export default function Form() {
   };
 
   const handleBackToHome = async () => {
-    setActiveStep(steps.form);
+    setActiveStep(steps.auth);
     setFormId("");
     setToEmail("");
+  };
+
+  const [authProcessing, setAuthProcessing] = useState(false);
+
+  const handleAuth = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    try {
+      setAuthProcessing(true);
+
+      const response = await fetch("/api/password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.error) {
+          toast.error(data.error);
+        } else {
+          toast.success("Password is correct");
+          setActiveStep(steps.form);
+        }
+      } else {
+        toast.error("Invalid password");
+      }
+    } catch (e) {
+      toast.error("Invalid password");
+    } finally {
+      setAuthProcessing(false);
+    }
   };
 
   return (
     <div className="from__main__container">
       <div className="from__main__container__upper">
+        {activeStep === steps.auth && (
+          <form className="form__warper popup" onSubmit={handleAuth}>
+            <div
+              className="form__warper__logo"
+              style={{
+                marginBottom: -50,
+              }}
+            >
+              <Image width={250} height={70} src="/secondLogo.png" alt="logo" />
+            </div>
+            <div className="form__input__warper">
+              <div className="input__entry">
+                <div className="input__entry__label">Password</div>
+                <input
+                  className="input__entry__label__input"
+                  type="password"
+                  placeholder="Enter password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+              className="register__button"
+              type="submit"
+              disabled={authProcessing}
+            >
+              {authProcessing ? "Processing..." : "Submit"}
+            </button>
+          </form>
+        )}
         {activeStep === steps.form && (
           <form className="form__warper" onSubmit={handleSubmit}>
             <div className="form__warper__logo">
@@ -320,7 +416,7 @@ export default function Form() {
                 <div className="input__entry__label">Vehicle Value</div>
                 <input
                   className="input__entry__label__input"
-                  type="number"
+                  type="text"
                   placeholder="Enter Vehicle Value "
                   value={formData.policy.vehicleValue}
                   onChange={(e) =>
@@ -538,6 +634,143 @@ export default function Form() {
                       certificate: {
                         ...formData.certificate,
                         registrationNo: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+            </div>
+            <div className="form__input__heading" style={{ marginTop: "20px" }}>
+              Email
+            </div>
+            <div className="form__input__warper">
+              <div className="input__entry">
+                <div className="input__entry__label">Duration: </div>
+                <input
+                  className="input__entry__label__input"
+                  type="text"
+                  placeholder="Enter duration"
+                  value={formData.email.duration}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        duration: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+              <div className="input__entry">
+                <div className="input__entry__label">Start Date</div>
+                <input
+                  className="input__entry__label__input"
+                  type="date"
+                  value={formData.email.startDate}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        startDate: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+              <div className="input__entry">
+                <div className="input__entry__label">End Date</div>
+                <input
+                  className="input__entry__label__input"
+                  type="date"
+                  value={formData.email.endDate}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        endDate: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+            </div>
+            <div className="form__input__warper">
+              <div className="input__entry">
+                <div className="input__entry__label">
+                  First Underwriting insurer premium:
+                </div>
+                <input
+                  className="input__entry__label__input"
+                  type="number"
+                  placeholder="Enter First Underwriting insurer premium"
+                  value={formData.email.firstUnderwritingInsurerPremium}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        firstUnderwritingInsurerPremium: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+              <div className="input__entry">
+                <div className="input__entry__label">
+                  Insurance premium tax:
+                </div>
+                <input
+                  className="input__entry__label__input"
+                  type="number"
+                  placeholder="Enter Insurance premium tax"
+                  value={formData.email.insurancePremium}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        insurancePremium: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+            </div>
+            <div className="form__input__warper">
+              <div className="input__entry">
+                <div className="input__entry__label">Tempcover admin fee:</div>
+                <input
+                  className="input__entry__label__input"
+                  type="number"
+                  placeholder="Enter Tempcover admin fee"
+                  value={formData.email.adminFee}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        adminFee: e.target.value,
+                      },
+                    })
+                  }
+                />
+              </div>
+              <div className="input__entry">
+                <div className="input__entry__label">Total charged:</div>
+                <input
+                  className="input__entry__label__input"
+                  type="number"
+                  placeholder="Enter Total charged"
+                  value={formData.email.totalCharged}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: {
+                        ...formData.email,
+                        totalCharged: e.target.value,
                       },
                     })
                   }
