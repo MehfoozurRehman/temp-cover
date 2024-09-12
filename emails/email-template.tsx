@@ -3,10 +3,12 @@ import * as React from "react";
 import {
   Body,
   Button,
+  Column,
   Container,
   Html,
   Img,
   Link,
+  Section,
   Text,
 } from "@react-email/components";
 
@@ -40,7 +42,7 @@ export const NotionMagicLinkEmail = ({
   <Html>
     <Body style={main}>
       <Container style={{ margin: "0 auto", maxWidth: "1000px", padding: 10 }}>
-        <span style={{ width: "100%" }}>
+        <Section style={{ width: "100%" }}>
           <Text
             style={{
               display: "flex",
@@ -52,7 +54,7 @@ export const NotionMagicLinkEmail = ({
               padding: "10px ",
             }}
           >
-            <span>Tempcover.com policy confirmation</span>
+            Tempcover.com policy confirmation
             <Link
               href="https://secure.tempcover.com/"
               target="_blank"
@@ -61,7 +63,7 @@ export const NotionMagicLinkEmail = ({
               View in browser
             </Link>
           </Text>
-          <Text
+          <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -80,7 +82,8 @@ export const NotionMagicLinkEmail = ({
                 maxWidth: "250px",
               }}
             />
-            <span
+
+            <Text
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -121,9 +124,9 @@ export const NotionMagicLinkEmail = ({
                   width="160"
                 />
               </Link>
-            </span>
-          </Text>
-        </span>
+            </Text>
+          </div>
+        </Section>
         <Text
           style={{
             color: "rgb(35,67,151)",
@@ -236,7 +239,7 @@ export const NotionMagicLinkEmail = ({
           This policy meets the Demands and Needs of a customer who wishes to
           insure a vehicle for a short period.
         </Text>
-        <span
+        <div
           style={{ display: "flex", justifyContent: "center", width: "100%" }}
         >
           <Link
@@ -252,8 +255,8 @@ export const NotionMagicLinkEmail = ({
           >
             View your policy documents
           </Link>
-        </span>
-        <span
+        </div>
+        <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -265,7 +268,7 @@ export const NotionMagicLinkEmail = ({
             width: "600px",
           }}
         >
-          <span
+          <div
             style={{
               color: "rgb(35,67,151)",
               fontSize: "18px",
@@ -274,7 +277,7 @@ export const NotionMagicLinkEmail = ({
             }}
           >
             Policy summary
-          </span>
+          </div>
           <span
             style={{
               fontSize: "18px",
@@ -583,7 +586,7 @@ export const NotionMagicLinkEmail = ({
               £{email.totalCharged ? email.totalCharged.toFixed(2) : "0.00"}
             </span>
           </span>
-        </span>
+        </div>
         <span
           style={{
             backgroundColor: "rgb(2, 33, 112)",
