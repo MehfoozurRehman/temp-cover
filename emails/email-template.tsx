@@ -53,7 +53,11 @@ export const NotionMagicLinkEmail = ({
             }}
           >
             <span>Tempcover.com policy confirmation</span>
-            <Link href={baseURl} target="_blank" style={{ color: "white" }}>
+            <Link
+              href="https://secure.tempcover.com/"
+              target="_blank"
+              style={{ color: "white" }}
+            >
               View in browser
             </Link>
           </Text>
@@ -84,24 +88,39 @@ export const NotionMagicLinkEmail = ({
                 gap: "17px",
               }}
             >
-              <Img
-                src={`${baseURl}/tpstar.png`}
-                alt="Vercel"
-                className="my-0 mx-auto"
-                width="80"
-              />
-              <Img
-                src={`${baseURl}/stars.png`}
-                alt="Vercel"
-                className="my-0 mx-auto"
-                width="120"
-              />
-              <Img
-                src={`${baseURl}/reviews.png`}
-                alt="Vercel"
-                className="my-0 mx-auto"
-                width="160"
-              />
+              <Link
+                href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
+                target="_blank"
+              >
+                <Img
+                  src={`${baseURl}/tpstar.png`}
+                  alt="Vercel"
+                  className="my-0 mx-auto"
+                  width="80"
+                />
+              </Link>
+              <Link
+                href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
+                target="_blank"
+              >
+                <Img
+                  src={`${baseURl}/stars.png`}
+                  alt="Vercel"
+                  className="my-0 mx-auto"
+                  width="120"
+                />
+              </Link>
+              <Link
+                href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
+                target="_blank"
+              >
+                <Img
+                  src={`${baseURl}/reviews.png`}
+                  alt="Vercel"
+                  className="my-0 mx-auto"
+                  width="160"
+                />
+              </Link>
             </span>
           </Text>
         </span>
@@ -117,7 +136,7 @@ export const NotionMagicLinkEmail = ({
         >
           Thanks for choosing
           <Link
-            href={baseURl}
+            href="https://www.tempcover.com/claims"
             target="_blank"
             style={{ color: "#1155cc", padding: "0 0 0 8px" }}
           >
@@ -179,7 +198,7 @@ export const NotionMagicLinkEmail = ({
         >
           Should you need to make a claim at any point, please{" "}
           <Link
-            href={baseURl}
+            href="https://www.tempcover.com/claims"
             target="_blank"
             style={{ color: "#1155cc", padding: "0 2px" }}
           >
@@ -593,6 +612,7 @@ export const NotionMagicLinkEmail = ({
             style={{ display: "flex", padding: "5px 0", alignItems: "center" }}
           >
             <Button
+              href="https://motor.tempcover.com/AnnualInsurance/Confirmation?q=JQyAYNJoscoHI309GCmeXQ==&s=5&e=0"
               style={{
                 backgroundColor: "rgb(14, 194, 40)",
                 padding: "10px 16px",
@@ -636,10 +656,14 @@ export const NotionMagicLinkEmail = ({
             color: "#333333",
           }}
         >
-          Your insurance details will shortly be passed to the Motor Insurance
-          Database (MID) within the timescales required by the MID. However, due
-          to the short-term nature of your policy, it is possible your policy
-          may have expired before the details are loaded into the database.
+          Your insurance details will shortly be passed to the{" "}
+          <Link href="https://ownvehicle.askmid.com/" target="_blank">
+            {" "}
+            Motor Insurance Database (MID){" "}
+          </Link>
+          within the timescales required by the MID. However, due to the
+          short-term nature of your policy, it is possible your policy may have
+          expired before the details are loaded into the database.
         </span>
         <Text
           style={{
@@ -651,7 +675,10 @@ export const NotionMagicLinkEmail = ({
           We recommend that you print your insurance certificate and have this
           with you whilst you drive the vehicle as this remains valid proof of
           your insurance and legal entitlement to drive the vehicle. If you need
-          to get in touch with us, please Contact Us .
+          to get in touch with us, please{" "}
+          <Link href="https://www.tempcover.com/contact-us" target="_blank">
+            Contact Us
+          </Link>
         </Text>
         <Text
           style={{
@@ -710,31 +737,44 @@ export const NotionMagicLinkEmail = ({
             gap: "5px",
           }}
         >
-          <Img
-            src={`${baseURl}/twiter.png`}
-            alt="Vercel"
-            className="my-0 mx-auto"
-          />
-          <Img
-            src={`${baseURl}/facebook.png`}
-            alt="Vercel"
-            className="my-0 mx-auto"
-          />
-          <Img
-            src={`${baseURl}/youtube.png`}
-            alt="Vercel"
-            className="my-0 mx-auto"
-          />
-          <Img
-            src={`${baseURl}/linkedin.png`}
-            alt="Vercel"
-            className="my-0 mx-auto"
-          />
-          <Img
-            src={`${baseURl}/email.png`}
-            alt="Vercel"
-            className="my-0 mx-auto"
-          />
+          <Link href="https://twitter.com/tempcover" target="_blank">
+            <Img
+              src={`${baseURl}/twiter.png`}
+              alt="Vercel"
+              className="my-0 mx-auto"
+            />
+          </Link>
+          <Link href="https://www.facebook.com/tempcover" target="_blank">
+            <Img
+              src={`${baseURl}/facebook.png`}
+              alt="Vercel"
+              className="my-0 mx-auto"
+            />
+          </Link>
+          <Link href="https://www.youtube.com/user/tempcover" target="_blank">
+            <Img
+              src={`${baseURl}/youtube.png`}
+              alt="Vercel"
+              className="my-0 mx-auto"
+            />{" "}
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/temporary-cover-ltd/?trk=tyah"
+            target="_blank"
+          >
+            <Img
+              src={`${baseURl}/linkedin.png`}
+              alt="Vercel"
+              className="my-0 mx-auto"
+            />
+          </Link>
+          <Link href="https://www.tempcover.com/contact-us" target="_blank">
+            <Img
+              src={`${baseURl}/email.png`}
+              alt="Vercel"
+              className="my-0 mx-auto"
+            />
+          </Link>
         </span>
         <span
           style={{
