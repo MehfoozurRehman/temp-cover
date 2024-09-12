@@ -11,13 +11,31 @@ import {
 } from "@react-email/components";
 
 import { baseURl } from "@/constants/config";
+import dayjs from "dayjs";
 
 interface NotionMagicLinkEmailProps {
-  pdflink?: string;
+  link: string;
+  policy: {
+    number: string | null;
+    insured: string | null;
+    registrationNo: string | null;
+    vehicleDetails: string | null;
+  };
+  email: {
+    duration: string | null;
+    startDate: Date | null;
+    endDate: Date | null;
+    firstUnderwritingInsurerPremium: number | null;
+    insurancePremium: number | null;
+    adminFee: number | null;
+    totalCharged: number | null;
+  };
 }
 
 export const NotionMagicLinkEmail = ({
-  pdflink,
+  link,
+  policy,
+  email,
 }: NotionMagicLinkEmailProps) => (
   <Html>
     <Body style={main}>
@@ -35,11 +53,7 @@ export const NotionMagicLinkEmail = ({
             }}
           >
             <span>Tempcover.com policy confirmation</span>
-            <Link
-              href="https://notion.so"
-              target="_blank"
-              style={{ color: "white" }}
-            >
+            <Link href={baseURl} target="_blank" style={{ color: "white" }}>
               View in browser
             </Link>
           </Text>
@@ -103,7 +117,7 @@ export const NotionMagicLinkEmail = ({
         >
           Thanks for choosing
           <Link
-            href="https://notion.so"
+            href={baseURl}
             target="_blank"
             style={{ color: "#1155cc", padding: "0 0 0 8px" }}
           >
@@ -138,7 +152,6 @@ export const NotionMagicLinkEmail = ({
             width: "100%",
             fontSize: "18px",
             padding: "0 0 5px",
-
             color: "#333333",
           }}
         >
@@ -150,26 +163,23 @@ export const NotionMagicLinkEmail = ({
             width: "100%",
             fontSize: "18px",
             padding: "0 0 5px",
-
             color: "#333333",
           }}
         >
           Check out the summary of your policy and a link to view and print your
           policy documents below.
         </Text>
-
         <Text
           style={{
             width: "100%",
             fontSize: "18px",
             padding: "0 0 5px",
-
             color: "#333333",
           }}
         >
           Should you need to make a claim at any point, please{" "}
           <Link
-            href="https://notion.so"
+            href={baseURl}
             target="_blank"
             style={{ color: "#1155cc", padding: "0 2px" }}
           >
@@ -182,13 +192,12 @@ export const NotionMagicLinkEmail = ({
             width: "100%",
             fontSize: "18px",
             padding: "0 0 5px",
-
             color: "#333333",
           }}
         >
           Thanks again for choosing{" "}
           <Link
-            href="https://notion.so"
+            href={baseURl}
             target="_blank"
             style={{ color: "#1155cc", padding: "0 3px 0 4px" }}
           >
@@ -211,8 +220,8 @@ export const NotionMagicLinkEmail = ({
         <span
           style={{ display: "flex", justifyContent: "center", width: "100%" }}
         >
-          <Button
-            onClick={() => window.open(pdflink)}
+          <Link
+            href={link}
             style={{
               backgroundColor: "rgb(107, 161, 37)",
               padding: "12px 16px",
@@ -223,7 +232,7 @@ export const NotionMagicLinkEmail = ({
             }}
           >
             View your policy documents
-          </Button>
+          </Link>
         </span>
         <span
           style={{
@@ -233,7 +242,6 @@ export const NotionMagicLinkEmail = ({
             borderRadius: "5px",
             margin: "10px auto 20px",
             padding: "12px 0",
-
             maxWidth: "100%",
             width: "600px",
           }}
@@ -241,7 +249,6 @@ export const NotionMagicLinkEmail = ({
           <span
             style={{
               color: "rgb(35,67,151)",
-
               fontSize: "18px",
               padding: "0 10px 0px",
               fontWeight: "bold",
@@ -255,7 +262,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -271,7 +277,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              TCV-MOT-1739398
+              {policy.number}
             </span>
           </span>
           <span
@@ -280,7 +286,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -296,7 +301,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              Mohammed Hasham Iqbal
+              {policy.insured}
             </span>
           </span>
           <span
@@ -305,7 +310,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -321,7 +325,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              MERCEDES-BENZ A 45 AMG 4MATIC
+              {policy.vehicleDetails}
             </span>
           </span>
           <span
@@ -330,7 +334,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -346,7 +349,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              T444XDX
+              {policy.registrationNo}
             </span>
           </span>
           <span
@@ -355,7 +358,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -371,7 +373,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              7 Days
+              {email.duration}
             </span>
           </span>
           <span
@@ -380,7 +382,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -396,7 +397,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              10 August 2024 22:03
+              {dayjs(email.startDate).format("DD MMMM YYYY HH:mm")}
             </span>
           </span>
           <span
@@ -405,7 +406,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -421,7 +421,7 @@ export const NotionMagicLinkEmail = ({
                 paddingLeft: "10px",
               }}
             >
-              17 August 2024 22:03
+              {dayjs(email.endDate).format("DD MMMM YYYY HH:mm")}
             </span>
           </span>
           <Text
@@ -437,7 +437,7 @@ export const NotionMagicLinkEmail = ({
           >
             You have been charged
             <span style={{ color: "rgb(35,67,151)", padding: "0 3px 0 4px" }}>
-              £198.55
+              £{email.totalCharged ? email.totalCharged.toFixed(2) : "0.00"}
             </span>{" "}
             and a breakdown of the cost is
           </Text>
@@ -460,7 +460,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -478,7 +477,10 @@ export const NotionMagicLinkEmail = ({
                 justifyContent: "flex-end",
               }}
             >
-              £172.99
+              £
+              {email.firstUnderwritingInsurerPremium
+                ? email.firstUnderwritingInsurerPremium.toFixed(2)
+                : "0.00"}
             </span>
           </span>
           <span
@@ -487,7 +489,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -505,7 +506,10 @@ export const NotionMagicLinkEmail = ({
                 justifyContent: "flex-end",
               }}
             >
-              £20.76
+              £
+              {email.insurancePremium
+                ? email.insurancePremium.toFixed(2)
+                : "0.00"}
             </span>
           </span>
           <span
@@ -514,7 +518,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -532,7 +535,7 @@ export const NotionMagicLinkEmail = ({
                 justifyContent: "flex-end",
               }}
             >
-              £4.80{" "}
+              £{email.adminFee ? email.adminFee.toFixed(2) : "0.00"}
             </span>
           </span>
           <span
@@ -541,7 +544,6 @@ export const NotionMagicLinkEmail = ({
               padding: "0 10px",
               fontWeight: "bold",
               marginTop: "8px",
-
               display: "flex",
             }}
           >
@@ -559,7 +561,7 @@ export const NotionMagicLinkEmail = ({
                 justifyContent: "flex-end",
               }}
             >
-              £198.55
+              £{email.totalCharged ? email.totalCharged.toFixed(2) : "0.00"}
             </span>
           </span>
         </span>
@@ -568,14 +570,11 @@ export const NotionMagicLinkEmail = ({
             backgroundColor: "rgb(2, 33, 112)",
             color: "white",
             fontSize: "16px",
-
             padding: "20px 15px",
             display: "flex",
             flexDirection: "column",
-
             borderRadius: "5px",
             margin: "80px auto 20px",
-
             maxWidth: "100%",
             width: "600px",
           }}
@@ -587,14 +586,12 @@ export const NotionMagicLinkEmail = ({
             </span>{" "}
             plus
           </span>
-
           <span style={{ fontWeight: "bold" }}>
             enjoy a whole year of rewards**
           </span>
           <span
             style={{ display: "flex", padding: "5px 0", alignItems: "center" }}
           >
-            {" "}
             <Button
               style={{
                 backgroundColor: "rgb(14, 194, 40)",
@@ -626,7 +623,6 @@ export const NotionMagicLinkEmail = ({
           style={{
             width: "100%",
             fontSize: "16px",
-
             fontWeight: "bold",
             color: "rgb(35,67,151)",
           }}
@@ -637,7 +633,6 @@ export const NotionMagicLinkEmail = ({
           style={{
             width: "100%",
             fontSize: "13px",
-
             color: "#333333",
           }}
         >
@@ -650,7 +645,6 @@ export const NotionMagicLinkEmail = ({
           style={{
             width: "100%",
             fontSize: "13px",
-
             color: "#333333",
           }}
         >
@@ -663,7 +657,6 @@ export const NotionMagicLinkEmail = ({
           style={{
             width: "100%",
             fontSize: "13px",
-
             color: "#333333",
           }}
         >
@@ -673,7 +666,6 @@ export const NotionMagicLinkEmail = ({
           style={{
             width: "100%",
             fontSize: "13px",
-
             color: "#333333",
           }}
         >
@@ -692,7 +684,6 @@ export const NotionMagicLinkEmail = ({
         >
           temcover
         </Text>
-
         <span
           style={{
             textAlign: "center",
@@ -769,7 +760,6 @@ export const NotionMagicLinkEmail = ({
           either the innocent or inadvertent transmission of any virus contained
           in this e-mail or any attachment thereto.
         </span>
-
         <span
           style={{
             color: "rgb(35,67,151)",
@@ -860,7 +850,22 @@ export const NotionMagicLinkEmail = ({
 );
 
 NotionMagicLinkEmail.PreviewProps = {
-  pdflink: "sparo-ndigo-amurt-secan",
+  link: "https://notion.so",
+  policy: {
+    number: "123456",
+    insured: "Mohammed Hasham Iqbal",
+    registrationNo: "T444XDX",
+    vehicleDetails: "MERCEDES-BENZ A 45 AMG 4MATIC",
+  },
+  email: {
+    duration: "7 Days",
+    startDate: new Date(),
+    endDate: new Date(),
+    firstUnderwritingInsurerPremium: 172.99,
+    insurancePremium: 20.76,
+    adminFee: 4.8,
+    totalCharged: 198.55,
+  },
 } as NotionMagicLinkEmailProps;
 
 export default NotionMagicLinkEmail;
