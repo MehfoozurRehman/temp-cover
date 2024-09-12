@@ -10,12 +10,38 @@ export async function POST(request: Request): Promise<NextResponse> {
   try {
     const { email, formId } = await request.json();
 
+    if (!email || !formId) {
+      return NextResponse.json({ message: "Email and formId are required" });
+    }
+
+    const formData = await prisma.form.findUnique({
+      where: {
+        id: formId,
+      },
+      select: {
+        email: true,
+        policy: {
+          select: {
+            number: true,
+            insured: true,
+            registrationNo: true,
+            vehicleDetails: true,
+          },
+        },
+      },
+    });
+
+    if (!formData) {
+      return NextResponse.json({ message: "Form not found" });
+    }
+
     sendEmail({
       from: "Acme <onboarding@resend.dev>",
-      to: "delivered@resend.dev",
-      subject: "Welcome to Zood",
+      to: ["your-email@example.com", email],
+      subject: "Your policy details from temp cover",
       react: Template({
-        pdflink: baseURl + `?id=${formId}`,
+        link: baseURl + `?id=${formId}`,
+        ...formData,
       }),
     });
 
