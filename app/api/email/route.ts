@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Template from "@/emails/email-template";
 import { baseURl } from "@/constants/config";
 import catchBlockApi from "@/utils/catchBlockApi";
+import prisma from "@/lib/prisma";
 import sendEmail from "@/utils/resend";
 
 export const dynamic = "force-dynamic";
