@@ -212,7 +212,7 @@ export const NotionMagicLinkEmail = ({
             color: "#333333",
           }}
         >
-          Hi Mohammed,
+          Hi {policy.insured},
         </Text>
         <Text
           style={{
