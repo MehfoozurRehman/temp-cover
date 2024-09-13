@@ -41,7 +41,7 @@ export const NotionMagicLinkEmail = ({
 }: NotionMagicLinkEmailProps) => (
   <Html>
     <Body style={main}>
-      <Container style={{ margin: "0 auto", maxWidth: "1000px", padding: 10 }}>
+      <Container style={{ margin: "0 auto", maxWidth: "600px", padding: 10 }}>
         <Section style={{ width: "100%" }}>
           <Section
             style={{
