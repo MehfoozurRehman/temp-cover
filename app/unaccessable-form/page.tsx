@@ -73,7 +73,7 @@ export default function Form() {
             formData.policy.expirationDate
           ).toISOString(),
           premium: parseFloat(formData.policy.premium),
-          vehicleValue: parseFloat(formData.policy.vehicleValue),
+          vehicleValue: formData.policy.vehicleValue,
           compulsoryExcessFee: parseFloat(formData.policy.compulsoryExcessFee),
           voluntaryExcessFee: parseFloat(formData.policy.voluntaryExcessFee),
           totalExcessFee: parseFloat(formData.policy.totalExcessFee),
