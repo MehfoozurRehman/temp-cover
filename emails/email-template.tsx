@@ -3,6 +3,7 @@ import * as React from "react";
 import {
   Body,
   Button,
+  Column,
   Container,
   Html,
   Img,
@@ -42,89 +43,134 @@ export const NotionMagicLinkEmail = ({
     <Body style={main}>
       <Container style={{ margin: "0 auto", maxWidth: "1000px", padding: 10 }}>
         <Section style={{ width: "100%" }}>
-          <Text
+          <Section
             style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
               width: "100%",
               backgroundColor: "rgb(35, 67, 151)",
               fontSize: "16px",
-              padding: "10px ",
+              padding: "10px",
+              color: "white",
             }}
           >
-            Tempcover.com policy confirmation
-            <Link
-              href="https://secure.tempcover.com/"
-              target="_blank"
-              style={{ color: "white" }}
+            <table
+              role="presentation"
+              cellPadding="0"
+              cellSpacing="0"
+              width="100%"
+              style={{ tableLayout: "fixed" }}
             >
-              View in browser
-            </Link>
-          </Text>
-          <div
+              <tr>
+                <td
+                  style={{
+                    textAlign: "left",
+                    fontSize: "16px",
+                    color: "black",
+                  }}
+                >
+                  Tempcover.com policy confirmation
+                </td>
+                <td style={{ textAlign: "right", fontSize: "16px" }}>
+                  <Link
+                    href="https://secure.tempcover.com/"
+                    target="_blank"
+                    style={{ color: "white" }}
+                  >
+                    View in browser
+                  </Link>
+                </td>
+              </tr>
+            </table>
+          </Section>
+
+          <table
+            role="presentation"
             style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
               width: "100%",
               fontSize: "16px",
-              alignItems: "center",
+              borderSpacing: 0,
+              padding: "10px",
             }}
           >
-            <Img
-              src={`${baseURl}/tempcover.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-              style={{
-                flex: "1",
-                maxWidth: "250px",
-              }}
-            />
+            <tr>
+              <td
+                style={{ textAlign: "left", width: "250px", padding: "10px" }}
+              >
+                <Img
+                  src={`${baseURl}/tempcover.png`}
+                  alt="Vercel"
+                  style={{ maxWidth: "250px", display: "block" }}
+                />
+              </td>
 
-            <Text
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-end",
-                gap: "17px",
-              }}
-            >
-              <Link
-                href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
-                target="_blank"
-              >
-                <Img
-                  src={`${baseURl}/tpstar.png`}
-                  alt="Vercel"
-                  className="my-0 mx-auto"
-                  width="80"
-                />
-              </Link>
-              <Link
-                href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
-                target="_blank"
-              >
-                <Img
-                  src={`${baseURl}/stars.png`}
-                  alt="Vercel"
-                  className="my-0 mx-auto"
-                  width="120"
-                />
-              </Link>
-              <Link
-                href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
-                target="_blank"
-              >
-                <Img
-                  src={`${baseURl}/reviews.png`}
-                  alt="Vercel"
-                  className="my-0 mx-auto"
-                  width="160"
-                />
-              </Link>
-            </Text>
-          </div>
+              <td style={{ textAlign: "right", padding: "10px" }}>
+                <table
+                  role="presentation"
+                  style={{
+                    width: "100%",
+                    textAlign: "right",
+                    borderSpacing: "0",
+                  }}
+                >
+                  <tr>
+                    <td style={{ paddingBottom: "17px" }}>
+                      <Link
+                        href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/tpstar.png`}
+                          alt="Vercel"
+                          style={{
+                            display: "block",
+                            marginLeft: "auto",
+                            width: "80px",
+                          }}
+                        />
+                      </Link>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style={{ paddingBottom: "17px" }}>
+                      <Link
+                        href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/stars.png`}
+                          alt="Vercel"
+                          style={{
+                            display: "block",
+                            marginLeft: "auto",
+                            width: "120px",
+                          }}
+                        />
+                      </Link>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <Link
+                        href="https://uk.trustpilot.com/review/tempcover.com?utm_medium=Trustbox&utm_source=EmailNewsletter2"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/reviews.png`}
+                          alt="Vercel"
+                          style={{
+                            display: "block",
+                            marginLeft: "auto",
+                            width: "160px",
+                          }}
+                        />
+                      </Link>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </Section>
         <Text
           style={{
@@ -238,409 +284,491 @@ export const NotionMagicLinkEmail = ({
           This policy meets the Demands and Needs of a customer who wishes to
           insure a vehicle for a short period.
         </Text>
-        <div
-          style={{ display: "flex", justifyContent: "center", width: "100%" }}
+        <table
+          role="presentation"
+          style={{ width: "100%", textAlign: "center", margin: "0 auto" }}
         >
-          <Link
-            href={link}
-            style={{
-              backgroundColor: "rgb(107, 161, 37)",
-              padding: "12px 16px",
-              borderRadius: "3px",
-              color: "white",
-              fontSize: "16px",
-              cursor: "pointer",
-            }}
-          >
-            View your policy documents
-          </Link>
-        </div>
-        <div
+          <tr>
+            <td>
+              <Link
+                href={link}
+                style={{
+                  backgroundColor: "rgb(107, 161, 37)",
+                  padding: "12px 16px",
+                  borderRadius: "3px",
+                  color: "white",
+                  fontSize: "16px",
+                  textDecoration: "none",
+                  display: "inline-block",
+                }}
+              >
+                View your policy documents
+              </Link>
+            </td>
+          </tr>
+        </table>
+
+        <Container
           style={{
-            display: "flex",
-            flexDirection: "column",
             border: "2px solid rgb(35, 67, 151)",
             borderRadius: "5px",
             margin: "10px auto 20px",
-            padding: "12px 0",
+            padding: "12px",
             maxWidth: "100%",
             width: "600px",
           }}
         >
-          <div
-            style={{
-              color: "rgb(35,67,151)",
-              fontSize: "18px",
-              padding: "0 10px 0px",
-              fontWeight: "bold",
-            }}
-          >
-            Policy summary
-          </div>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Policy number:
-            </span>
-            <span
+          <Section>
+            <table
               style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
+                width: "100%",
+                borderCollapse: "collapse",
+                marginTop: "8px",
               }}
             >
-              {policy.number}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Policy holder:
-            </span>
-            <span
+              <tbody>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                      color: "rgb(35,67,151)",
+                    }}
+                  >
+                    Policy summary
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "13px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "right",
+                    }}
+                  ></td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Policy number:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {policy.number}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Policy holder:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {policy.insured}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Vehicle type:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {policy.vehicleDetails}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Vehicle registration:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {policy.registrationNo}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Duration:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {email.duration}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Start date/time:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {dayjs(email.startDate).format("DD MMMM YYYY HH:mm")}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    End date/time:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {dayjs(email.endDate).format("DD MMMM YYYY HH:mm")}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </Section>
+
+          <Section>
+            <Text
               style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
+                fontSize: "18px",
+                padding: "8px 10px 0px",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "#333333",
               }}
             >
-              {policy.insured}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Vehicle type:
-            </span>
-            <span
+              You have been charged
+              <span style={{ color: "rgb(35,67,151)", padding: "0 3px 0 4px" }}>
+                £{email.totalCharged ? email.totalCharged.toFixed(2) : "0.00"}
+              </span>{" "}
+              and a breakdown of the cost is below:
+            </Text>
+          </Section>
+
+          <Section>
+            <table
               style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
+                width: "100%",
+                borderCollapse: "collapse",
+                marginTop: "8px",
               }}
             >
-              {policy.vehicleDetails}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Vehicle registration:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-              }}
-            >
-              {policy.registrationNo}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Duration:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-              }}
-            >
-              {email.duration}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Start date/time:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-              }}
-            >
-              {dayjs(email.startDate).format("DD MMMM YYYY HH:mm")}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              End date/time:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-              }}
-            >
-              {dayjs(email.endDate).format("DD MMMM YYYY HH:mm")}
-            </span>
-          </span>
-          <Text
-            style={{
-              fontSize: "18px",
-              padding: "8px 10px 0px",
-              fontWeight: "bold",
-              textAlign: "center",
-              display: "flex",
-              justifyContent: "center",
-              color: "#333333",
-            }}
-          >
-            You have been charged
-            <span style={{ color: "rgb(35,67,151)", padding: "0 3px 0 4px" }}>
-              £{email.totalCharged ? email.totalCharged.toFixed(2) : "0.00"}
-            </span>{" "}
-            and a breakdown of the cost is
-          </Text>
-          <span
-            style={{
-              fontSize: "18px",
-              fontWeight: "bold",
-              textAlign: "center",
-              display: "flex",
-              justifyContent: "center",
-              color: "#333333",
-              marginBottom: "16px",
-            }}
-          >
-            below:
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              First Underwriting insurer premium:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              £
-              {email.firstUnderwritingInsurerPremium
-                ? email.firstUnderwritingInsurerPremium.toFixed(2)
-                : "0.00"}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Insurance premium tax:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              £
-              {email.insurancePremium
-                ? email.insurancePremium.toFixed(2)
-                : "0.00"}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Tempcover admin fee:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              £{email.adminFee ? email.adminFee.toFixed(2) : "0.00"}
-            </span>
-          </span>
-          <span
-            style={{
-              fontSize: "18px",
-              padding: "0 10px",
-              fontWeight: "bold",
-              marginTop: "8px",
-              display: "flex",
-            }}
-          >
-            <span style={{ width: "50%", paddingRight: "10px" }}>
-              Total charged:
-            </span>
-            <span
-              style={{
-                fontSize: "13px",
-                width: "50%",
-                fontWeight: "normal",
-                color: "rgb(35,67,151)",
-                paddingLeft: "10px",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              £{email.totalCharged ? email.totalCharged.toFixed(2) : "0.00"}
-            </span>
-          </span>
-        </div>
-        <span
+              <tbody>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    First Underwriting insurer premium:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "right",
+                    }}
+                  >
+                    £
+                    {email.firstUnderwritingInsurerPremium
+                      ? email.firstUnderwritingInsurerPremium.toFixed(2)
+                      : "0.00"}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Insurance premium tax:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "right",
+                    }}
+                  >
+                    £
+                    {email.insurancePremium
+                      ? email.insurancePremium.toFixed(2)
+                      : "0.00"}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Tempcover admin fee:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "right",
+                    }}
+                  >
+                    £{email.adminFee ? email.adminFee.toFixed(2) : "0.00"}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      width: "50%",
+                      paddingRight: "10px",
+                      paddingBottom: "10px",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Total charged:
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "14px",
+                      width: "50%",
+                      fontWeight: "normal",
+                      color: "rgb(35,67,151)",
+                      paddingLeft: "10px",
+                      paddingBottom: "10px",
+                      textAlign: "right",
+                    }}
+                  >
+                    £
+                    {email.totalCharged
+                      ? email.totalCharged.toFixed(2)
+                      : "0.00"}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </Section>
+        </Container>
+
+        <Container
           style={{
             backgroundColor: "rgb(2, 33, 112)",
             color: "white",
             fontSize: "16px",
             padding: "20px 15px",
-            display: "flex",
-            flexDirection: "column",
             borderRadius: "5px",
             margin: "80px auto 20px",
             maxWidth: "100%",
             width: "600px",
           }}
         >
-          <span style={{ paddingBottom: "5px" }}>
-            Compare full annual van insurance and save up to
-            <span style={{ padding: "0 3px", fontWeight: "bold" }}>
-              £263*
-            </span>{" "}
-            plus
-          </span>
-          <span style={{ fontWeight: "bold" }}>
-            enjoy a whole year of rewards**
-          </span>
-          <span
-            style={{ display: "flex", padding: "5px 0", alignItems: "center" }}
+          <table
+            style={{
+              width: "100%",
+              borderCollapse: "collapse",
+            }}
           >
-            <Button
-              href="https://motor.tempcover.com/AnnualInsurance/Confirmation?q=JQyAYNJoscoHI309GCmeXQ==&s=5&e=0"
-              style={{
-                backgroundColor: "rgb(14, 194, 40)",
-                padding: "10px 16px",
-                borderRadius: "3px",
-                color: "white",
-                fontSize: "16px",
-                cursor: "pointer",
-                width: "fit-content",
-                margin: "0 12px",
-              }}
-            >
-              Start a quote
-            </Button>
-            <Img
-              src={`${baseURl}/compare.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-              style={{ height: "32px" }}
-            />
-          </span>
-          <span style={{ fontSize: "8px", lineHeight: "18px" }}>
-            *Based on online independent research by Consumer Intelligence
-            during May 2020 50% of customers could achieve this saving on their
-            van insurance with Compare the Market.. **T’s & C’s apply
-          </span>
-        </span>
+            <tr>
+              <td
+                style={{
+                  paddingBottom: "5px",
+                  color: "white",
+                  fontSize: "16px",
+                }}
+              >
+                Compare full annual van insurance and save up to{" "}
+                <span style={{ fontWeight: "bold" }}>£263*</span> plus
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  fontWeight: "bold",
+                  color: "white",
+                  paddingBottom: "10px",
+                }}
+              >
+                enjoy a whole year of rewards**
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  padding: "5px 0",
+                  display: "flex",
+                }}
+              >
+                <Button
+                  href="https://motor.tempcover.com/AnnualInsurance/Confirmation?q=JQyAYNJoscoHI309GCmeXQ==&s=5&e=0"
+                  style={{
+                    backgroundColor: "rgb(14, 194, 40)",
+                    padding: "10px 16px",
+                    borderRadius: "3px",
+                    color: "white",
+                    fontSize: "16px",
+                    cursor: "pointer",
+                    marginRight: "12px",
+                  }}
+                >
+                  Start a quote
+                </Button>
+                <Img
+                  src={`${baseURl}/compare.png`}
+                  alt="Compare"
+                  style={{ height: "32px", verticalAlign: "middle" }}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  fontSize: "8px",
+                  lineHeight: "18px",
+                  color: "white",
+                  paddingTop: "10px",
+                }}
+              >
+                *Based on online independent research by Consumer Intelligence
+                during May 2020, 50% of customers could achieve this saving on
+                their van insurance with Compare the Market. **T’s & C’s apply.
+              </td>
+            </tr>
+          </table>
+        </Container>
+
         <Text
           style={{
             width: "100%",
@@ -651,7 +779,7 @@ export const NotionMagicLinkEmail = ({
         >
           Updating the MID
         </Text>
-        <span
+        <Text
           style={{
             width: "100%",
             fontSize: "13px",
@@ -666,7 +794,7 @@ export const NotionMagicLinkEmail = ({
           within the timescales required by the MID. However, due to the
           short-term nature of your policy, it is possible your policy may have
           expired before the details are loaded into the database.
-        </span>
+        </Text>
         <Text
           style={{
             width: "100%",
@@ -691,7 +819,7 @@ export const NotionMagicLinkEmail = ({
         >
           We hope to see you again soon,
         </Text>
-        <span
+        <Text
           style={{
             width: "100%",
             fontSize: "13px",
@@ -701,7 +829,7 @@ export const NotionMagicLinkEmail = ({
           You are receiving this email as part of our quote service. This
           service does not relate to the marketing communication preferences you
           set when obtaining a quote.
-        </span>
+        </Text>
         <Text
           style={{
             width: "100%",
@@ -713,179 +841,192 @@ export const NotionMagicLinkEmail = ({
         >
           temcover
         </Text>
-        <span
-          style={{
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "20px 0",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          Get the updates
-        </span>
-        <span
-          style={{
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "0px 0 30px",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "5px",
-          }}
-        >
-          <Link href="https://twitter.com/tempcover" target="_blank">
-            <Img
-              src={`${baseURl}/twiter.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-            />
-          </Link>
-          <Link href="https://www.facebook.com/tempcover" target="_blank">
-            <Img
-              src={`${baseURl}/facebook.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-            />
-          </Link>
-          <Link href="https://www.youtube.com/user/tempcover" target="_blank">
-            <Img
-              src={`${baseURl}/youtube.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-            />{" "}
-          </Link>
-          <Link
-            href="https://www.linkedin.com/company/temporary-cover-ltd/?trk=tyah"
-            target="_blank"
+
+        <Container style={{ width: "100%", fontSize: "14px", color: "#333" }}>
+          <table
+            style={{ width: "100%", textAlign: "center", margin: "0 auto" }}
           >
-            <Img
-              src={`${baseURl}/linkedin.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-            />
-          </Link>
-          <Link href="https://www.tempcover.com/contact-us" target="_blank">
-            <Img
-              src={`${baseURl}/email.png`}
-              alt="Vercel"
-              className="my-0 mx-auto"
-            />
-          </Link>
-        </span>
-        <span
-          style={{
-            width: "100%",
-            fontSize: "13px",
-            display: "flex",
-            textAlign: "center",
-            color: "#333333",
-          }}
-        >
-          IMPORTANT CONFIDENTIALITY NOTICE: this email and the information it
-          contains may be confidential, legally privileged and protected by law.
-          Access by the intended recipient only is authorised. Any liability (in
-          negligence or otherwise) arising from any third party acting, or
-          refraining from acting, on any information contained in this e-mail is
-          hereby excluded. If you are not the intended recipient, please notify
-          the sender immediately and do not disclose the contents of this e-mail
-          or any attachment to any other person, use it for any purpose, or
-          store or copy the information in any medium. Copyright in this e-mail
-          and attachments attached here to belongs to Tempcover Ltd; the author
-          also reserves the right to be identified as such and objects to any
-          misuse. Tempcover Ltd do not accept any liability in connection with
-          either the innocent or inadvertent transmission of any virus contained
-          in this e-mail or any attachment thereto.
-        </span>
-        <span
-          style={{
-            color: "rgb(35,67,151)",
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "16px 0 2px",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          TEMPCOVER LTD
-        </span>
-        <span
-          style={{
-            color: "rgb(35,67,151)",
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "2px 0",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          REGISTERED IN ENGLAND NO.9923259
-        </span>
-        <span
-          style={{
-            color: "rgb(35,67,151)",
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "2px 0",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          REGISTERED OFFICE: 2ndFLOOR ADMIRAL HOUSE, HARLINGTON WAY, FLEET,
-        </span>
-        <span
-          style={{
-            color: "rgb(35,67,151)",
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "2px 0",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          HAMPSHIRE, GU51 4BB
-        </span>
-        <span
-          style={{
-            color: "rgb(35,67,151)",
-            textAlign: "center",
-            width: "100%",
-            fontSize: "14px",
-            padding: "2px 0 5px",
-            fontWeight: "bold",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Link
-            href="https://www.tempcover.com/terms-conditions"
-            target="_blank"
-            style={{ color: "#1155cc", padding: "0 4px" }}
-          >
-            Terms
-          </Link>
-          |
-          <Link
-            href="https://www.tempcover.com/privacy-notice"
-            target="_blank"
-            style={{ color: "#1155cc", padding: "0 4px" }}
-          >
-            Privacy
-          </Link>
-        </span>
+            <tr>
+              <td style={{ padding: "20px 0", fontWeight: "bold" }}>
+                Get the updates
+              </td>
+            </tr>
+            <tr>
+              <td style={{ padding: "0 0 30px", fontWeight: "bold" }}>
+                <table style={{ margin: "0 auto", display: "inline-block" }}>
+                  <tr>
+                    <td>
+                      <Link
+                        href="https://twitter.com/tempcover"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/twiter.png`}
+                          alt="Twitter"
+                          width="24"
+                          height="24"
+                        />
+                      </Link>
+                    </td>
+                    <td>
+                      <Link
+                        href="https://www.facebook.com/tempcover"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/facebook.png`}
+                          alt="Facebook"
+                          width="24"
+                          height="24"
+                        />
+                      </Link>
+                    </td>
+                    <td>
+                      <Link
+                        href="https://www.youtube.com/user/tempcover"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/youtube.png`}
+                          alt="YouTube"
+                          width="24"
+                          height="24"
+                        />
+                      </Link>
+                    </td>
+                    <td>
+                      <Link
+                        href="https://www.linkedin.com/company/temporary-cover-ltd/?trk=tyah"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/linkedin.png`}
+                          alt="LinkedIn"
+                          width="24"
+                          height="24"
+                        />
+                      </Link>
+                    </td>
+                    <td>
+                      <Link
+                        href="https://www.tempcover.com/contact-us"
+                        target="_blank"
+                      >
+                        <Img
+                          src={`${baseURl}/email.png`}
+                          alt="Email"
+                          width="24"
+                          height="24"
+                        />
+                      </Link>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  fontSize: "13px",
+                  padding: "10px 0",
+                  color: "#333333",
+                }}
+              >
+                IMPORTANT CONFIDENTIALITY NOTICE: this email and the information
+                it contains may be confidential, legally privileged and
+                protected by law. Access by the intended recipient only is
+                authorised. Any liability (in negligence or otherwise) arising
+                from any third party acting, or refraining from acting, on any
+                information contained in this e-mail is hereby excluded. If you
+                are not the intended recipient, please notify the sender
+                immediately and do not disclose the contents of this e-mail or
+                any attachment to any other person, use it for any purpose, or
+                store or copy the information in any medium. Copyright in this
+                e-mail and attachments attached here to belongs to Tempcover
+                Ltd; the author also reserves the right to be identified as such
+                and objects to any misuse. Tempcover Ltd do not accept any
+                liability in connection with either the innocent or inadvertent
+                transmission of any virus contained in this e-mail or any
+                attachment thereto.
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  color: "rgb(35,67,151)",
+                  fontSize: "14px",
+                  padding: "16px 0 2px",
+                  fontWeight: "bold",
+                }}
+              >
+                TEMPCOVER LTD
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  color: "rgb(35,67,151)",
+                  fontSize: "14px",
+                  padding: "2px 0",
+                  fontWeight: "bold",
+                }}
+              >
+                REGISTERED IN ENGLAND NO. 9923259
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  color: "rgb(35,67,151)",
+                  fontSize: "14px",
+                  padding: "2px 0",
+                  fontWeight: "bold",
+                }}
+              >
+                REGISTERED OFFICE: 2nd FLOOR ADMIRAL HOUSE, HARLINGTON WAY,
+                FLEET,
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  color: "rgb(35,67,151)",
+                  fontSize: "14px",
+                  padding: "2px 0",
+                  fontWeight: "bold",
+                }}
+              >
+                HAMPSHIRE, GU51 4BB
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  color: "rgb(35,67,151)",
+                  fontSize: "14px",
+                  padding: "2px 0 5px",
+                  fontWeight: "bold",
+                }}
+              >
+                <Link
+                  href="https://www.tempcover.com/terms-conditions"
+                  target="_blank"
+                  style={{ color: "#1155cc", padding: "0 4px" }}
+                >
+                  Terms
+                </Link>
+                |
+                <Link
+                  href="https://www.tempcover.com/privacy-notice"
+                  target="_blank"
+                  style={{ color: "#1155cc", padding: "0 4px" }}
+                >
+                  Privacy
+                </Link>
+              </td>
+            </tr>
+          </table>
+        </Container>
       </Container>
     </Body>
   </Html>
