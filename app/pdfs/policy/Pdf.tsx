@@ -43,7 +43,7 @@ export default function Pdf({
     reasonForIssue: string;
     premium: number;
     registrationNo: string;
-    vehicleValue: number;
+    vehicleValue: string;
     vehicleDetails: string;
     compulsoryExcessFee: number;
     voluntaryExcessFee: number;
@@ -497,7 +497,7 @@ export default function Pdf({
                       fontWeight: "normal",
                     }}
                   >
-                    {data.vehicleValue?.toLocaleString()}
+                    {data.vehicleValue}
                   </Text>
                 </View>
                 <View
