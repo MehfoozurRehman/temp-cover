@@ -41,7 +41,7 @@ export const NotionMagicLinkEmail = ({
 }: NotionMagicLinkEmailProps) => (
   <Html>
     <Body style={main}>
-      <Container style={{ margin: "0 auto", maxWidth: "600px", padding: 10 }}>
+      <Container style={{ margin: "0 auto", maxWidth: "580px", padding: 10 }}>
         <Section style={{ width: "100%" }}>
           <Section
             style={{
@@ -262,11 +262,11 @@ export const NotionMagicLinkEmail = ({
             color: "#333333",
           }}
         >
-          Thanks again for choosing{" "}
+          Thanks again for choosing
           <Link
-            href={baseURl}
+            href="https://www.tempcover.com/"
             target="_blank"
-            style={{ color: "#1155cc", padding: "0 3px 0 4px" }}
+            style={{ color: "#1155cc", padding: "0 3px" }}
           >
             tempcover.com
           </Link>
