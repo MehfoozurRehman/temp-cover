@@ -42,7 +42,7 @@ export default async function PDF({ searchParams }: { searchParams: any }) {
           reasonForIssue: form.policy.reasonForIssue || "",
           premium: form.policy.premium || 0,
           registrationNo: form.policy.registrationNo || "",
-          vehicleValue: form.policy.vehicleValue || 0,
+          vehicleValue: form.policy.vehicleValue || "",
           vehicleDetails: form.policy.vehicleDetails || "",
           compulsoryExcessFee: form.policy.compulsoryExcessFee || 0,
           voluntaryExcessFee: form.policy.voluntaryExcessFee || 0,
