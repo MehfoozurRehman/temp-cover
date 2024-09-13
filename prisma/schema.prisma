@@ -17,7 +17,7 @@ type Policy {
   reasonForIssue      String?
   premium             Float?
   registrationNo      String?
-  vehicleValue        Float?
+  vehicleValue        String?
   vehicleDetails      String?
   compulsoryExcessFee Float?
   voluntaryExcessFee  Float?
