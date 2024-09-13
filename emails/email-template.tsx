@@ -740,7 +740,7 @@ export const NotionMagicLinkEmail = ({
                     color: "white",
                     fontSize: "16px",
                     cursor: "pointer",
-                    marginRight: "12px",
+                    margin: "0 12px",
                   }}
                 >
                   Start a quote
