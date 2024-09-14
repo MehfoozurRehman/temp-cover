@@ -42,7 +42,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     const res = await sendEmail({
       from,
       to: emailFrom ? [email] : ["ravager009@gmail.com"],
-      subject: "Your policy details from temp cover",
+      subject: `Tempcover.com Policy Confirmation ${formData.policy.number}`,
       react: Template({
         link: baseURl + `?id=${formId}`,
         ...formData,
