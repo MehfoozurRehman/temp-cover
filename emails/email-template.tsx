@@ -839,9 +839,8 @@ export const NotionMagicLinkEmail = ({
             color: "rgb(35,67,151)",
           }}
         >
-          temcover
+          teamcover
         </Text>
-
         <Container style={{ width: "100%", fontSize: "14px", color: "#333" }}>
           <table
             style={{ width: "100%", textAlign: "center", margin: "0 auto" }}
