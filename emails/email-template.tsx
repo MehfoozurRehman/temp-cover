@@ -333,7 +333,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                       color: "rgb(35,67,151)",
                     }}
@@ -358,7 +358,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -384,7 +384,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -410,7 +410,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -436,7 +436,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -462,7 +462,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -488,7 +488,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -514,7 +514,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -571,7 +571,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -600,7 +600,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -629,7 +629,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -655,7 +655,7 @@ export const NotionMagicLinkEmail = ({
                       width: "50%",
                       paddingRight: "10px",
                       paddingBottom: "10px",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: "bold",
                     }}
                   >
@@ -983,7 +983,7 @@ export const NotionMagicLinkEmail = ({
                   fontWeight: "bold",
                 }}
               >
-                REGISTERED OFFICE: 2nd FLOOR ADMIRAL HOUSE, HARLINGTON WAY,
+                REGISTERED OFFICE: 2<sup>nd</sup> FLOOR ADMIRAL HOUSE, HARLINGTON WAY,
                 FLEET,
               </td>
             </tr>
@@ -1055,5 +1055,5 @@ export default NotionMagicLinkEmail;
 
 const main = {
   backgroundColor: "#ffffff",
-  fontFamily: "Roboto, Fira Sans, Helvetica Neue, sans-serif",
+  fontFamily: "Arial, Fira Sans, Helvetica Neue, sans-serif",
 };
