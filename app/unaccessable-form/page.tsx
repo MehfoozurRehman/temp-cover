@@ -324,7 +324,7 @@ export default function Form() {
                 <div className="input__entry__label">Issue Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.policy.dateIssued}
                   onChange={(e) =>
                     setFormData({
@@ -341,7 +341,7 @@ export default function Form() {
                 <div className="input__entry__label">Effective Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.policy.effectiveDate}
                   onChange={(e) =>
                     setFormData({
@@ -360,7 +360,7 @@ export default function Form() {
                 <div className="input__entry__label">Expiration Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.policy.expirationDate}
                   onChange={(e) =>
                     setFormData({
@@ -589,7 +589,7 @@ export default function Form() {
                 <div className="input__entry__label">Effective Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.certificate.effectiveDate}
                   onChange={(e) =>
                     setFormData({
@@ -606,7 +606,7 @@ export default function Form() {
                 <div className="input__entry__label">Expiration Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.certificate.expirationDate}
                   onChange={(e) =>
                     setFormData({
@@ -666,7 +666,7 @@ export default function Form() {
                 <div className="input__entry__label">Start Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.email.startDate}
                   onChange={(e) =>
                     setFormData({
@@ -683,7 +683,7 @@ export default function Form() {
                 <div className="input__entry__label">End Date</div>
                 <input
                   className="input__entry__label__input"
-                  type="date"
+                  type="datetime-local"
                   value={formData.email.endDate}
                   onChange={(e) =>
                     setFormData({
