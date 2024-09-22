@@ -18,12 +18,12 @@
     "@react-email/components": "0.0.25",
     "@react-pdf/renderer": "^3.4.4",
     "dayjs": "^1.11.13",
-    "next": "^14.2.11",
+    "next": "^14.2.13",
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^10.0.5",
     "resend": "^4.0.0",
-    "sass": "^1.78.0",
+    "sass": "^1.79.3",
     "sharp": "0.32.6"
   },
   "devDependencies": {
