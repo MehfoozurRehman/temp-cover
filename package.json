@@ -27,7 +27,7 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@types/node": "^22.7.7",
+    "@types/node": "^22.7.9",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "prisma": "^5.21.1",
