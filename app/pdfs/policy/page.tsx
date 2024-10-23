@@ -17,7 +17,8 @@ const Pdf = dynamic(() => import("./Pdf"), {
   ),
 });
 
-export default async function PDF({ searchParams }: { searchParams: any }) {
+export default async function PDF(props: { searchParams: Promise<any> }) {
+  const searchParams = await props.searchParams;
   try {
     const { id } = searchParams;
 
