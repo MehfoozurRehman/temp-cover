@@ -1,7 +1,8 @@
 import PageUi from "./PageUi";
 import { notFound } from "next/navigation";
 
-export default function Public({ searchParams }: { searchParams: any }) {
+export default async function Public(props: { searchParams: Promise<any> }) {
+  const searchParams = await props.searchParams;
   const { id } = searchParams;
 
   if (!id) {
