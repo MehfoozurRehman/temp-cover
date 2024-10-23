@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Toast />
-        {/*{children}*/}
+        {children}
       </body>
     </html>
   );
