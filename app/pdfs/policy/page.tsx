@@ -1,23 +1,5 @@
-"use client";
-
-import dynamic from "next/dynamic";
+import Pdf from "./Pdf";
 import prisma from "@/lib/prisma";
-
-const Pdf = dynamic(() => import("./Pdf"), {
-  ssr: false,
-  loading: () => (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      Loading...
-    </div>
-  ),
-});
 
 export default async function PDF(props: { searchParams: Promise<any> }) {
   const searchParams = await props.searchParams;
