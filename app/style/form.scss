@@ -109,6 +109,8 @@
 .register__button:hover {
   background-color: #5f6a9aa6;
 }
+
+// popup style
 .popup {
   gap: 2em;
 }
@@ -138,6 +140,7 @@
   background-color: #5f6a9a;
   color: white;
   border-radius: 60px;
+
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;

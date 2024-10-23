@@ -1,8 +1,23 @@
-import Pdf from "./Pdf";
+import dynamic from "next/dynamic";
 import prisma from "@/lib/prisma";
 
-export default async function PDF(props: { searchParams: Promise<any> }) {
-  const searchParams = await props.searchParams;
+const Pdf = dynamic(() => import("./Pdf"), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      Loading...
+    </div>
+  ),
+});
+
+export default async function PDF({ searchParams }: { searchParams: any }) {
   try {
     const { id } = searchParams;
 
