@@ -622,27 +622,8 @@ export default function Pdf({
                     </Text>
                   </View>
                 </View>
-                {/* <View style={{
-                  width: "40%"
-                }}>
-                  <View style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    width: "100%"
-                  }}>
-                    <Text style={{
-                      width: "70%"
-                    }}>Compulsory Excess Amount
-                    </Text>
-                    <Text>£1250.00
-                    </Text>
-                  </View>
-                </View> */}
               </View>
             </View>
-
-            {/* horizontal line */}
             <View
               style={{
                 marginTop: '10px',
@@ -651,9 +632,6 @@ export default function Pdf({
                 backgroundColor: 'black',
               }}
             ></View>
-
-            {/* 3rd table */}
-
             <View
               style={{
                 border: '1.2px solid black',
@@ -683,7 +661,6 @@ export default function Pdf({
                     fontSize: '7px',
                   }}
                 >
-                  {' '}
                   CONTINUOUS INSURANCE ENFORCEMENT and the MOTOR INSURANCE DATABASE{' '}
                 </Text>
                 <Text
@@ -691,7 +668,6 @@ export default function Pdf({
                     fontSize: '6px',
                   }}
                 >
-                  {' '}
                   Information relating to your policy will be added to the Motor Insurance Database ('MID') managed by the Motor Insurance Bureau ('MIB'). MID and the data stored on it may be used by
                   certain statutory and/or authorised bodies including the Police, the DVLA, the DVLANI, the Insurance Fraud Bureau and other bodies permitted by law for purposes not limited to but
                   including:
@@ -748,8 +724,6 @@ export default function Pdf({
                 </Text>
               </View>
             </View>
-
-            {/* horizontal line */}
             <View
               style={{
                 marginTop: '20px',
@@ -813,7 +787,6 @@ export default function Pdf({
                 annual period of the policy cover. In all other respects the terms, general conditions and general exceptions of this policy shall apply.
               </Text>
             </View>
-            {/* horizontal line */}
             <View
               style={{
                 marginTop: '8px',
@@ -847,7 +820,6 @@ export default function Pdf({
                 Financial Services Limited. First Underwriting Limited is authorised and regulated by the Financial Conduct Authority under FRN 624585.
               </Text>
             </View>
-            {/* horizontal line */}
             <View
               style={{
                 marginTop: '5px',
