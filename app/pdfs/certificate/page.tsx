@@ -1,15 +1,15 @@
-import dynamic from "next/dynamic";
-import prisma from "@/lib/prisma";
+import dynamic from 'next/dynamic';
+import prisma from '@/lib/prisma';
 
-const Pdf = dynamic(() => import("./Pdf"), {
+const Pdf = dynamic(() => import('./Pdf'), {
   ssr: false,
   loading: () => (
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
       }}
     >
       Loading...
@@ -27,17 +27,17 @@ export default async function PDF({ searchParams }: { searchParams: any }) {
     });
 
     if (!form) {
-      throw new Error("Certificate not found");
+      throw new Error('Certificate not found');
     }
 
     return (
       <Pdf
         data={{
-          number: form?.certificate?.number || "",
-          insured: form?.certificate?.insured || "",
-          effectiveDate: form?.certificate?.effectiveDate || "",
-          expirationDate: form?.certificate?.expirationDate || "",
-          registrationNo: form?.certificate?.registrationNo || "",
+          number: form?.certificate?.number || '',
+          insured: form?.certificate?.insured || '',
+          effectiveDate: form?.certificate?.effectiveDate || '',
+          expirationDate: form?.certificate?.expirationDate || '',
+          registrationNo: form?.certificate?.registrationNo || '',
         }}
       />
     );

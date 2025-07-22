@@ -1,14 +1,14 @@
-import { NextResponse } from "next/server";
-import catchBlockApi from "@/utils/catchBlockApi";
-import prisma from "@/lib/prisma";
+import { NextResponse } from 'next/server';
+import catchBlockApi from '@/utils/catchBlockApi';
+import prisma from '@/lib/prisma';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 export async function POST(request: Request): Promise<NextResponse> {
   try {
     const { password } = await request.json();
 
     if (!password) {
-      return NextResponse.json({ error: "Password is required" });
+      return NextResponse.json({ error: 'Password is required' });
     }
 
     const authCount = await prisma.auth.count();
@@ -20,7 +20,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         },
       });
 
-      return NextResponse.json({ message: "New entry created" });
+      return NextResponse.json({ message: 'New entry created' });
     }
 
     const checkPassword = await prisma.auth.findFirst({
@@ -30,10 +30,10 @@ export async function POST(request: Request): Promise<NextResponse> {
     });
 
     if (!checkPassword) {
-      return NextResponse.json({ error: "Password is incorrect" });
+      return NextResponse.json({ error: 'Password is incorrect' });
     }
 
-    return NextResponse.json({ message: "Password is correct" });
+    return NextResponse.json({ message: 'Password is correct' });
   } catch (error: any) {
     return catchBlockApi(error);
   }
@@ -45,7 +45,7 @@ export async function PUT(request: Request): Promise<NextResponse> {
 
     if (!oldPassword || !newPassword) {
       return NextResponse.json({
-        message: "Old and new password are required",
+        message: 'Old and new password are required',
       });
     }
 
@@ -56,7 +56,7 @@ export async function PUT(request: Request): Promise<NextResponse> {
     });
 
     if (!checkPassword) {
-      return NextResponse.json({ error: "Old password is incorrect" });
+      return NextResponse.json({ error: 'Old password is incorrect' });
     }
 
     await prisma.auth.updateMany({
@@ -68,7 +68,7 @@ export async function PUT(request: Request): Promise<NextResponse> {
       },
     });
 
-    return NextResponse.json({ message: "Password changed" });
+    return NextResponse.json({ message: 'Password changed' });
   } catch (error: any) {
     return catchBlockApi(error);
   }

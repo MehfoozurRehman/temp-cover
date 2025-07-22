@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import "@/app/style/form.scss";
+import '@/app/style/form.scss';
 
-import Image from "next/image";
-import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import Image from 'next/image';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function ChangePassword() {
   const router = useRouter();
 
-  const [oldPassword, setOldPassword] = useState("");
-  const [newPassword, setNewPassword] = useState("");
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
   const [processing, setProcessing] = useState(false);
 
   const handleChangePassword = async (e: { preventDefault: () => void }) => {
@@ -21,19 +21,19 @@ export default function ChangePassword() {
       setProcessing(true);
 
       if (!oldPassword || !newPassword) {
-        toast.error("Please fill all fields");
+        toast.error('Please fill all fields');
         return;
       }
 
       if (oldPassword === newPassword) {
-        toast.error("Old and new password cannot be same");
+        toast.error('Old and new password cannot be same');
         return;
       }
 
-      const response = await fetch("/api/password", {
-        method: "PUT",
+      const response = await fetch('/api/password', {
+        method: 'PUT',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ oldPassword, newPassword }),
       });
@@ -43,16 +43,16 @@ export default function ChangePassword() {
         if (data.error) {
           toast.error(data.error);
         } else {
-          toast.success("Password changed successfully");
-          setOldPassword("");
-          setNewPassword("");
-          router.push("/unaccessable-form");
+          toast.success('Password changed successfully');
+          setOldPassword('');
+          setNewPassword('');
+          router.push('/unaccessable-form');
         }
       } else {
-        toast.error("Password not changed");
+        toast.error('Password not changed');
       }
     } catch (e) {
-      toast.error("Password not changed");
+      toast.error('Password not changed');
     } finally {
       setProcessing(false);
     }
@@ -78,47 +78,31 @@ export default function ChangePassword() {
           <div
             className="form__input__warper"
             style={{
-              flexDirection: "column",
-              width: "100%",
+              flexDirection: 'column',
+              width: '100%',
             }}
           >
             <div
               className="input__entry"
               style={{
-                width: "100%",
+                width: '100%',
               }}
             >
               <div className="input__entry__label">Old Password</div>
-              <input
-                className="input__entry__label__input"
-                type="password"
-                placeholder="Enter old password"
-                value={oldPassword}
-                onChange={(e) => setOldPassword(e.target.value)}
-              />
+              <input className="input__entry__label__input" type="password" placeholder="Enter old password" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />
             </div>
             <div
               className="input__entry"
               style={{
-                width: "100%",
+                width: '100%',
               }}
             >
               <div className="input__entry__label">New Password</div>
-              <input
-                className="input__entry__label__input"
-                type="password"
-                placeholder="Enter new password"
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-              />
+              <input className="input__entry__label__input" type="password" placeholder="Enter new password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
             </div>
           </div>
-          <button
-            type="submit"
-            className="form__warper__btn"
-            disabled={processing}
-          >
-            {processing ? "Processing..." : "Change Password"}
+          <button type="submit" className="form__warper__btn" disabled={processing}>
+            {processing ? 'Processing...' : 'Change Password'}
           </button>
         </form>
       </div>

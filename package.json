@@ -11,7 +11,8 @@
     "dev:email": "email dev",
     "export:email": "email export",
     "generate": "prisma generate",
-    "studio": "prisma studio"
+    "studio": "prisma studio",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",

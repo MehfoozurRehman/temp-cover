@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import "@/app/style/form.scss";
+import '@/app/style/form.scss';
 
-import Image from "next/image";
-import { baseURl } from "@/constants/config";
-import { toast } from "react-toastify";
-import { useState } from "react";
+import Image from 'next/image';
+import { baseURl } from '@/constants/config';
+import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 const steps = {
   auth: 0,
@@ -16,45 +16,45 @@ const steps = {
 };
 
 export default function Form() {
-  const [formId, setFormId] = useState("");
-  const [password, setPassword] = useState("");
-  const [toEmail, setToEmail] = useState("");
+  const [formId, setFormId] = useState('');
+  const [password, setPassword] = useState('');
+  const [toEmail, setToEmail] = useState('');
   const [activeStep, setActiveStep] = useState(steps.auth);
   const [formProcessing, setFormProcessing] = useState(false);
   const [emailProcessing, setEmailProcessing] = useState(false);
 
   const [formData, setFormData] = useState({
     policy: {
-      number: "",
-      dateIssued: "",
-      effectiveDate: "",
-      expirationDate: "",
-      reasonForIssue: "",
-      premium: "",
-      registrationNo: "",
-      vehicleValue: "",
-      vehicleDetails: "",
-      compulsoryExcessFee: "",
-      voluntaryExcessFee: "",
-      totalExcessFee: "",
-      description: "",
-      insured: "",
+      number: '',
+      dateIssued: '',
+      effectiveDate: '',
+      expirationDate: '',
+      reasonForIssue: '',
+      premium: '',
+      registrationNo: '',
+      vehicleValue: '',
+      vehicleDetails: '',
+      compulsoryExcessFee: '',
+      voluntaryExcessFee: '',
+      totalExcessFee: '',
+      description: '',
+      insured: '',
     },
     certificate: {
-      number: "",
-      insured: "",
-      effectiveDate: "",
-      expirationDate: "",
-      registrationNo: "",
+      number: '',
+      insured: '',
+      effectiveDate: '',
+      expirationDate: '',
+      registrationNo: '',
     },
     email: {
-      duration: "",
-      startDate: "",
-      endDate: "",
-      firstUnderwritingInsurerPremium: "",
-      insurancePremium: "",
-      adminFee: "",
-      totalCharged: "",
+      duration: '',
+      startDate: '',
+      endDate: '',
+      firstUnderwritingInsurerPremium: '',
+      insurancePremium: '',
+      adminFee: '',
+      totalCharged: '',
     },
   });
 
@@ -69,9 +69,7 @@ export default function Form() {
           ...formData.policy,
           dateIssued: new Date(formData.policy.dateIssued).toISOString(),
           effectiveDate: new Date(formData.policy.effectiveDate).toISOString(),
-          expirationDate: new Date(
-            formData.policy.expirationDate
-          ).toISOString(),
+          expirationDate: new Date(formData.policy.expirationDate).toISOString(),
           premium: parseFloat(formData.policy.premium),
           vehicleValue: formData.policy.vehicleValue,
           compulsoryExcessFee: parseFloat(formData.policy.compulsoryExcessFee),
@@ -80,69 +78,63 @@ export default function Form() {
         },
         certificate: {
           ...formData.certificate,
-          effectiveDate: new Date(
-            formData.certificate.effectiveDate
-          ).toISOString(),
-          expirationDate: new Date(
-            formData.certificate.expirationDate
-          ).toISOString(),
+          effectiveDate: new Date(formData.certificate.effectiveDate).toISOString(),
+          expirationDate: new Date(formData.certificate.expirationDate).toISOString(),
         },
         email: {
           ...formData.email,
           startDate: new Date(formData.email.startDate).toISOString(),
           endDate: new Date(formData.email.endDate).toISOString(),
-          firstUnderwritingInsurerPremium: parseFloat(
-            formData.email.firstUnderwritingInsurerPremium
-          ),
+          firstUnderwritingInsurerPremium: parseFloat(formData.email.firstUnderwritingInsurerPremium),
           insurancePremium: parseFloat(formData.email.insurancePremium),
           adminFee: parseFloat(formData.email.adminFee),
           totalCharged: parseFloat(formData.email.totalCharged),
         },
       };
 
-      const response = await fetch("/api", {
-        method: "POST",
+      const response = await fetch('/api', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(finalFormData),
       });
 
       if (response.ok) {
-        toast.success("Form saved");
+        toast.success('Form saved');
 
         setFormData({
           policy: {
-            number: "",
-            dateIssued: "",
-            effectiveDate: "",
-            expirationDate: "",
-            reasonForIssue: "",
-            premium: "",
-            registrationNo: "",
-            vehicleValue: "",
-            vehicleDetails: "",
-            compulsoryExcessFee: "",
-            voluntaryExcessFee: "",
-            totalExcessFee: "",
-            description: "",
-            insured: "",
+            number: '',
+            dateIssued: '',
+            effectiveDate: '',
+            expirationDate: '',
+            reasonForIssue: '',
+            premium: '',
+            registrationNo: '',
+            vehicleValue: '',
+            vehicleDetails: '',
+            compulsoryExcessFee: '',
+            voluntaryExcessFee: '',
+            totalExcessFee: '',
+            description: '',
+            insured: '',
           },
           certificate: {
-            number: "",
-            insured: "",
-            effectiveDate: "",
-            expirationDate: "",
-            registrationNo: "",
+            number: '',
+            insured: '',
+            effectiveDate: '',
+            expirationDate: '',
+            registrationNo: '',
           },
           email: {
-            duration: "",
-            startDate: "",
-            endDate: "",
-            firstUnderwritingInsurerPremium: "",
-            insurancePremium: "",
-            adminFee: "",
-            totalCharged: "",
+            duration: '',
+            startDate: '',
+            endDate: '',
+            firstUnderwritingInsurerPremium: '',
+            insurancePremium: '',
+            adminFee: '',
+            totalCharged: '',
           },
         });
 
@@ -152,10 +144,10 @@ export default function Form() {
 
         setFormId(json.id);
       } else {
-        toast.error("Form not saved");
+        toast.error('Form not saved');
       }
     } catch (e) {
-      toast.error("Form not saved");
+      toast.error('Form not saved');
     } finally {
       setFormProcessing(false);
     }
@@ -178,24 +170,24 @@ export default function Form() {
 
     try {
       setEmailProcessing(true);
-      const response = await fetch("/api/email", {
-        method: "POST",
+      const response = await fetch('/api/email', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email: toEmail, formId }),
       });
 
       if (response.ok) {
-        toast.success("Email sent");
+        toast.success('Email sent');
 
-        setToEmail("");
+        setToEmail('');
         setActiveStep(steps.success);
       } else {
-        toast.error("Email not sent");
+        toast.error('Email not sent');
       }
     } catch (e) {
-      toast.error("Email not sent");
+      toast.error('Email not sent');
     } finally {
       setEmailProcessing(false);
     }
@@ -203,8 +195,8 @@ export default function Form() {
 
   const handleBackToHome = async () => {
     setActiveStep(steps.auth);
-    setFormId("");
-    setToEmail("");
+    setFormId('');
+    setToEmail('');
   };
 
   const [authProcessing, setAuthProcessing] = useState(false);
@@ -215,10 +207,10 @@ export default function Form() {
     try {
       setAuthProcessing(true);
 
-      const response = await fetch("/api/password", {
-        method: "POST",
+      const response = await fetch('/api/password', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ password }),
       });
@@ -228,14 +220,14 @@ export default function Form() {
         if (data.error) {
           toast.error(data.error);
         } else {
-          toast.success("Password is correct");
+          toast.success('Password is correct');
           setActiveStep(steps.form);
         }
       } else {
-        toast.error("Invalid password");
+        toast.error('Invalid password');
       }
     } catch (e) {
-      toast.error("Invalid password");
+      toast.error('Invalid password');
     } finally {
       setAuthProcessing(false);
     }
@@ -257,21 +249,11 @@ export default function Form() {
             <div className="form__input__warper">
               <div className="input__entry">
                 <div className="input__entry__label">Password</div>
-                <input
-                  className="input__entry__label__input"
-                  type="password"
-                  placeholder="Enter password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+                <input className="input__entry__label__input" type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
             </div>
-            <button
-              className="register__button"
-              type="submit"
-              disabled={authProcessing}
-            >
-              {authProcessing ? "Processing..." : "Submit"}
+            <button className="register__button" type="submit" disabled={authProcessing}>
+              {authProcessing ? 'Processing...' : 'Submit'}
             </button>
           </form>
         )}
@@ -543,7 +525,7 @@ export default function Form() {
                 />
               </div>
             </div>
-            <div className="form__input__heading" style={{ marginTop: "20px" }}>
+            <div className="form__input__heading" style={{ marginTop: '20px' }}>
               Certificate
             </div>
             <div className="form__input__warper">
@@ -640,7 +622,7 @@ export default function Form() {
                 />
               </div>
             </div>
-            <div className="form__input__heading" style={{ marginTop: "20px" }}>
+            <div className="form__input__heading" style={{ marginTop: '20px' }}>
               Email
             </div>
             <div className="form__input__warper">
@@ -699,9 +681,7 @@ export default function Form() {
             </div>
             <div className="form__input__warper">
               <div className="input__entry">
-                <div className="input__entry__label">
-                  First Underwriting insurer premium:
-                </div>
+                <div className="input__entry__label">First Underwriting insurer premium:</div>
                 <input
                   className="input__entry__label__input"
                   type="number"
@@ -719,9 +699,7 @@ export default function Form() {
                 />
               </div>
               <div className="input__entry">
-                <div className="input__entry__label">
-                  Insurance premium tax:
-                </div>
+                <div className="input__entry__label">Insurance premium tax:</div>
                 <input
                   className="input__entry__label__input"
                   type="number"
@@ -777,25 +755,15 @@ export default function Form() {
                 />
               </div>
             </div>
-            <button
-              className="register__button"
-              type="submit"
-              disabled={formProcessing}
-            >
-              {formProcessing ? "Processing..." : "Generate"}
+            <button className="register__button" type="submit" disabled={formProcessing}>
+              {formProcessing ? 'Processing...' : 'Generate'}
             </button>
           </form>
         )}
         {activeStep === steps.generated && (
           <form className="form__warper popup" onSubmit={handleSwitchToEmail}>
             <div className="form__warper__icon">
-              <svg
-                width="77"
-                height="62"
-                viewBox="0 0 77 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="77" height="62" viewBox="0 0 77 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M75.1349 11.7625L27.5459 59.3369C26.4306 60.4516 24.9181 61.0777 23.341 61.0777C21.7639 61.0777 20.2514 60.4516 19.1362 59.3369L2.57909 42.785C-0.0199296 40.1898 -0.0804274 35.8786 2.56649 33.3311C3.80328 32.1443 5.45608 31.4892 7.17048 31.5061C8.88489 31.5231 10.5244 32.2108 11.7374 33.4218L23.3335 45.0125L65.8632 2.50264C67.1047 1.34005 68.75 0.705566 70.451 0.733294C72.1521 0.761022 73.7757 1.44879 74.9787 2.65123C76.1817 3.85366 76.8698 5.47654 76.8976 7.17682C76.9253 8.87709 76.2905 10.5215 75.1274 11.7625H75.1349Z"
                   fill="#5F6A9A"
@@ -804,18 +772,10 @@ export default function Form() {
             </div>
             <div className="form__warper__buttons">
               <div className="form__warper__row">
-                <button
-                  type="button"
-                  onClick={handleDownloadCertificate}
-                  className="form__warper__btn btn__secondary"
-                >
+                <button type="button" onClick={handleDownloadCertificate} className="form__warper__btn btn__secondary">
                   Download Certificate
                 </button>
-                <button
-                  type="button"
-                  onClick={handleDownloadPolicy}
-                  className="form__warper__btn btn__secondary"
-                >
+                <button type="button" onClick={handleDownloadPolicy} className="form__warper__btn btn__secondary">
                   Download Policy
                 </button>
               </div>
@@ -828,30 +788,18 @@ export default function Form() {
             <div className="form__input__warper">
               <div className="input__entry">
                 <div className="input__entry__label">Email</div>
-                <input
-                  className="input__entry__label__input"
-                  type="email"
-                  placeholder="Enter email"
-                  value={toEmail}
-                  onChange={(e) => setToEmail(e.target.value)}
-                />
+                <input className="input__entry__label__input" type="email" placeholder="Enter email" value={toEmail} onChange={(e) => setToEmail(e.target.value)} />
               </div>
             </div>
             <button className="form__warper__btn" disabled={emailProcessing}>
-              {emailProcessing ? "Processing..." : "Send"}
+              {emailProcessing ? 'Processing...' : 'Send'}
             </button>
           </form>
         )}
         {activeStep === steps.success && (
           <form className="form__warper popup" onSubmit={handleBackToHome}>
             <div className="form__warper__icon">
-              <svg
-                width="77"
-                height="62"
-                viewBox="0 0 77 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="77" height="62" viewBox="0 0 77 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M75.1349 11.7625L27.5459 59.3369C26.4306 60.4516 24.9181 61.0777 23.341 61.0777C21.7639 61.0777 20.2514 60.4516 19.1362 59.3369L2.57909 42.785C-0.0199296 40.1898 -0.0804274 35.8786 2.56649 33.3311C3.80328 32.1443 5.45608 31.4892 7.17048 31.5061C8.88489 31.5231 10.5244 32.2108 11.7374 33.4218L23.3335 45.0125L65.8632 2.50264C67.1047 1.34005 68.75 0.705566 70.451 0.733294C72.1521 0.761022 73.7757 1.44879 74.9787 2.65123C76.1817 3.85366 76.8698 5.47654 76.8976 7.17682C76.9253 8.87709 76.2905 10.5215 75.1274 11.7625H75.1349Z"
                   fill="#5F6A9A"

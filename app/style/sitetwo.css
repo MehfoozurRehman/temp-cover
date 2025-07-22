@@ -6,13 +6,15 @@
 }
 :after,
 :before {
-  --tw-content: "";
+  --tw-content: '';
 }
 @font-face {
   font-family: Icomoon;
-  src: format("embedded-opentype"),
-    url("./fonts/icomoon.1db46404.ttf") format("truetype"),
-    url("./fonts/icomoon.1db46404.ttf") format("woff"), format("svg");
+  src:
+    format('embedded-opentype'),
+    url('./fonts/icomoon.1db46404.ttf') format('truetype'),
+    url('./fonts/icomoon.1db46404.ttf') format('woff'),
+    format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: block;
@@ -24,9 +26,21 @@ html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
   font-feature-settings: normal;
 }
 body {
@@ -63,8 +77,15 @@ code,
 kbd,
 pre,
 samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    Liberation Mono, Courier New, monospace;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
   font-size: 1em;
 }
 small {
@@ -105,9 +126,9 @@ button,
 select {
   text-transform: none;
 }
-[type="button"],
-[type="reset"],
-[type="submit"],
+[type='button'],
+[type='reset'],
+[type='submit'],
 button {
   -webkit-appearance: button;
   background-color: transparent;
@@ -126,7 +147,7 @@ progress {
 ::-webkit-outer-spin-button {
   height: auto;
 }
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -182,7 +203,7 @@ textarea::placeholder {
   opacity: 1;
   color: #9ca3af;
 }
-[role="button"],
+[role='button'],
 button {
   cursor: pointer;
 }
@@ -628,9 +649,7 @@ video {
 }
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 @keyframes spin {
   to {
@@ -1249,65 +1268,66 @@ video {
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
-    0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-tc-default {
   --tw-shadow: 0 6px 20px #2646941a;
   --tw-shadow-colored: 0 6px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
-    0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .drop-shadow-tc-default {
   --tw-drop-shadow: drop-shadow(0 6px 15px #26469429);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
 }
 .backdrop-blur-sm,
 .backdrop-blur-xl {
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-    var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-    var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .backdrop-blur-xl {
   --tw-backdrop-blur: blur(24px);
 }
 .transition {
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
     -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    backdrop-filter,
+    -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
 }
@@ -1321,30 +1341,33 @@ video {
 }
 @font-face {
   font-family: BrandonText;
-  src: url("./fonts/BrandonText-Light.otf") format("otf"),
-    url("./fonts/BrandonText-Light.otf") format("otf");
+  src:
+    url('./fonts/BrandonText-Light.otf') format('otf'),
+    url('./fonts/BrandonText-Light.otf') format('otf');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: BrandonText;
-  src: url("./fonts/BrandonText-RegularItalic.otf") format("otf"),
-    url("./fonts/BrandonText-RegularItalic.otf") format("otf");
+  src:
+    url('./fonts/BrandonText-RegularItalic.otf') format('otf'),
+    url('./fonts/BrandonText-RegularItalic.otf') format('otf');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: BrandonText;
-  src: url("./fonts/BrandonText-Bold.otf") format("otf"),
-    url("./fonts/BrandonText-Bold.otf") format("otf");
+  src:
+    url('./fonts/BrandonText-Bold.otf') format('otf'),
+    url('./fonts/BrandonText-Bold.otf') format('otf');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
-[class*=" icon-"],
-[class^="icon-"] {
+[class*=' icon-'],
+[class^='icon-'] {
   font-family: icomoon !important;
   speak: never;
   font-style: normal;
@@ -1357,72 +1380,72 @@ video {
 }
 .icon-cog:before,
 .icon-gear:before {
-  content: "\f013";
+  content: '\f013';
 }
 .icon-chevron-left:before {
-  content: "\f053";
+  content: '\f053';
 }
 .icon-chevron-right:before {
-  content: "\f054";
+  content: '\f054';
 }
 .icon-chevron-up:before {
-  content: "\f077";
+  content: '\f077';
 }
 .icon-chevron-down:before {
-  content: "\f078";
+  content: '\f078';
 }
 .icon-twitter:before {
-  content: "\f099";
+  content: '\f099';
 }
 .icon-facebook-f:before,
 .icon-facebook:before {
-  content: "\f09a";
+  content: '\f09a';
 }
 .icon-arrow-circle-left:before {
-  content: "\f0a8";
+  content: '\f0a8';
 }
 .icon-arrow-circle-right:before {
-  content: "\f0a9";
+  content: '\f0a9';
 }
 .icon-arrow-circle-up:before {
-  content: "\f0aa";
+  content: '\f0aa';
 }
 .icon-arrow-circle-down:before {
-  content: "\f0ab";
+  content: '\f0ab';
 }
 .icon-google-plus:before {
-  content: "\f0d5";
+  content: '\f0d5';
 }
 .icon-envelope:before {
-  content: "\f0e0";
+  content: '\f0e0';
 }
 .icon-linkedin:before {
-  content: "\f0e1";
+  content: '\f0e1';
 }
 .icon-angle-left:before {
-  content: "\f104";
+  content: '\f104';
 }
 .icon-angle-right:before {
-  content: "\f105";
+  content: '\f105';
 }
 .icon-angle-up:before {
-  content: "\f106";
+  content: '\f106';
 }
 .icon-angle-down:before {
-  content: "\f107";
+  content: '\f107';
 }
 .icon-spinner:before {
-  content: "\f110";
+  content: '\f110';
 }
 .icon-youtube-play:before {
-  content: "\f16a";
+  content: '\f16a';
 }
 .icon-file-pdf-o:before {
-  content: "\f1c1";
+  content: '\f1c1';
 }
 .icon-check:before,
-.wrapper input[type="checkbox"]:checked + .slider .marketingPreference:after {
-  content: "\f00c";
+.wrapper input[type='checkbox']:checked + .slider .marketingPreference:after {
+  content: '\f00c';
 }
 #getAQuoteMobilePolicies {
   display: none;
@@ -1478,19 +1501,19 @@ video {
   background-color: rgb(38 70 148 / var(--tw-bg-opacity));
 }
 .before\:content-\[\'\\f099\'\]:before {
-  --tw-content: "\f099";
+  --tw-content: '\f099';
   content: var(--tw-content);
 }
 .before\:content-\[\'\\f09a\'\]:before {
-  --tw-content: "\f09a";
+  --tw-content: '\f09a';
   content: var(--tw-content);
 }
 .before\:content-\[\'\\f16a\'\]:before {
-  --tw-content: "\f16a";
+  --tw-content: '\f16a';
   content: var(--tw-content);
 }
 .before\:content-\[\'\\f0e1\'\]:before {
-  --tw-content: "\f0e1";
+  --tw-content: '\f0e1';
   content: var(--tw-content);
 }
 .after\:absolute:after {
@@ -1543,15 +1566,15 @@ video {
   transition-duration: 0.15s;
 }
 .after\:content-\[\'\'\]:after {
-  --tw-content: "";
+  --tw-content: '';
   content: var(--tw-content);
 }
 .after\:content-\[\'\/\'\]:after {
-  --tw-content: "/";
+  --tw-content: '/';
   content: var(--tw-content);
 }
 .after\:content-\[\'\\f078\'\]:after {
-  --tw-content: "\f078";
+  --tw-content: '\f078';
   content: var(--tw-content);
 }
 .hover\:cursor-pointer:hover {
@@ -1658,9 +1681,7 @@ video {
 .peer:checked ~ .peer-checked\:after\:translate-x-full:after {
   content: var(--tw-content);
   --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .peer:checked ~ .peer-checked\:after\:border-tempcover-blue-800:after {
   content: var(--tw-content);
@@ -1677,7 +1698,7 @@ video {
   color: rgb(23 50 118 / var(--tw-text-opacity));
 }
 .peer:checked ~ .peer-checked\:after\:content-\[\'\\f00c\'\]:after {
-  --tw-content: "\f00c";
+  --tw-content: '\f00c';
   content: var(--tw-content);
 }
 .peer:focus ~ .peer-focus\:outline-none {

@@ -1,7 +1,7 @@
-import "@/app/style/site.css";
-import "@/app/style/sitetwo.css";
+import '@/app/style/site.css';
+import '@/app/style/sitetwo.css';
 
-import { baseURl } from "@/constants/config";
+import { baseURl } from '@/constants/config';
 
 export default function PageUi({ id }: { id: string }) {
   return (
@@ -27,176 +27,82 @@ export default function PageUi({ id }: { id: string }) {
                     <div className="fixed top-0 left-0 h-screen w-screen overflow-y-scroll bg-tempcover-blue-800 p-4 pt-14 text-center lg:hidden">
                       <div className="mb-4 flex flex-col gap-y-4 text-left font-brandon text-xl font-bold">
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
-                          <a
-                            id="menuLink4454"
-                            href="https://www.tempcover.com/"
-                            className="hover:underline text-white hover:no-underline font-lato text-xl"
-                          >
+                          <a id="menuLink4454" href="https://www.tempcover.com/" className="hover:underline text-white hover:no-underline font-lato text-xl">
                             Home
                           </a>
                         </div>
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
                           <span className="flex">
-                            <a
-                              id="menuLink10910"
-                              href="https://www.tempcover.com/temporary-car-insurance"
-                              className="hover:underline text-white hover:no-underline font-lato text-xl"
-                            >
+                            <a id="menuLink10910" href="https://www.tempcover.com/temporary-car-insurance" className="hover:underline text-white hover:no-underline font-lato text-xl">
                               Car
                             </a>
-                            <span
-                              className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child"
-                              data-id={10910}
-                            />
+                            <span className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child" data-id={10910} />
                           </span>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10910}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10910}>
                             <span>
-                              <a
-                                id="menuLink8964"
-                                href="https://www.tempcover.com/temporary-car-insurance"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8964" href="https://www.tempcover.com/temporary-car-insurance" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary car insurance
                               </a>
-                              <span
-                                className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-grandchild"
-                                data-id={8964}
-                              />
+                              <span className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-grandchild" data-id={8964} />
                             </span>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLinkview-temporary-car-insurance"
-                                href="https://www.tempcover.com/temporary-car-insurance"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLinkview-temporary-car-insurance" href="https://www.tempcover.com/temporary-car-insurance" className="hover:underline font-lato">
                                 View Temporary car insurance
                               </a>
                             </div>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLink8974"
-                                href="https://www.tempcover.com/temporary-car-insurance/hourly"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLink8974" href="https://www.tempcover.com/temporary-car-insurance/hourly" className="hover:underline font-lato">
                                 Hourly car insurance
                               </a>
                             </div>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLinkone-day-car-insurance"
-                                href="https://www.tempcover.com/temporary-car-insurance/one-day"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLinkone-day-car-insurance" href="https://www.tempcover.com/temporary-car-insurance/one-day" className="hover:underline font-lato">
                                 One day car insurance
                               </a>
                             </div>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLink8968"
-                                href="https://www.tempcover.com/temporary-car-insurance/weekly"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLink8968" href="https://www.tempcover.com/temporary-car-insurance/weekly" className="hover:underline font-lato">
                                 Weekly car insurance
                               </a>
                             </div>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLink8967"
-                                href="https://www.tempcover.com/temporary-car-insurance/one-month"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLink8967" href="https://www.tempcover.com/temporary-car-insurance/one-month" className="hover:underline font-lato">
                                 Monthly car insurance
                               </a>
                             </div>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLinkweekend-car-insurance-2"
-                                href="https://www.tempcover.com/temporary-car-insurance/weekend"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLinkweekend-car-insurance-2" href="https://www.tempcover.com/temporary-car-insurance/weekend" className="hover:underline font-lato">
                                 Weekend car insurance
                               </a>
                             </div>
-                            <div
-                              className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu"
-                              data-parentid={8964}
-                            >
-                              <a
-                                id="menuLink8969"
-                                href="https://www.tempcover.com/temporary-car-insurance/two-day"
-                                className="hover:underline font-lato"
-                              >
+                            <div className="flex text-base py-1 flex-col gap-y-4 text-left text-md text-white hidden grandchild-menu" data-parentid={8964}>
+                              <a id="menuLink8969" href="https://www.tempcover.com/temporary-car-insurance/two-day" className="hover:underline font-lato">
                                 Two day car insurance
                               </a>
                             </div>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10910}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10910}>
                             <span>
-                              <a
-                                id="menuLink10697"
-                                href="https://www.tempcover.com/temporary-car-insurance/young-drivers"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink10697" href="https://www.tempcover.com/temporary-car-insurance/young-drivers" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 New drivers
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10910}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10910}>
                             <span>
-                              <a
-                                id="menuLink8992"
-                                href="https://www.tempcover.com/temporary-car-insurance/students"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8992" href="https://www.tempcover.com/temporary-car-insurance/students" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Student drivers
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10910}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10910}>
                             <span>
-                              <a
-                                id="menuLink8987"
-                                href="https://www.tempcover.com/learner-driver-insurance"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8987" href="https://www.tempcover.com/learner-driver-insurance" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary learner driver insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10910}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10910}>
                             <span>
                               <a
                                 id="menuLink8988"
@@ -207,16 +113,9 @@ export default function PageUi({ id }: { id: string }) {
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10910}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10910}>
                             <span>
-                              <a
-                                id="menuLink8989"
-                                href="https://www.tempcover.com/guides"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8989" href="https://www.tempcover.com/guides" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Product guides
                               </a>
                             </span>
@@ -224,36 +123,19 @@ export default function PageUi({ id }: { id: string }) {
                         </div>
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
                           <span className="flex">
-                            <a
-                              id="menuLink8971"
-                              href="https://www.tempcover.com/temporary-van-insurance"
-                              className="hover:underline text-white hover:no-underline font-lato text-xl"
-                            >
+                            <a id="menuLink8971" href="https://www.tempcover.com/temporary-van-insurance" className="hover:underline text-white hover:no-underline font-lato text-xl">
                               Van
                             </a>
-                            <span
-                              className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child"
-                              data-id={8971}
-                            />
+                            <span className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child" data-id={8971} />
                           </span>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8971}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8971}>
                             <span>
-                              <a
-                                id="menuLink10568"
-                                href="https://www.tempcover.com/temporary-van-insurance"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink10568" href="https://www.tempcover.com/temporary-van-insurance" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary van insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8971}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8971}>
                             <span>
                               <a
                                 id="menuLink8973"
@@ -264,38 +146,21 @@ export default function PageUi({ id }: { id: string }) {
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8971}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8971}>
                             <span>
-                              <a
-                                id="menuLink10695"
-                                href="https://www.tempcover.com/temporary-van-insurance/one-day"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink10695" href="https://www.tempcover.com/temporary-van-insurance/one-day" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Daily van insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8971}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8971}>
                             <span>
-                              <a
-                                id="menuLink8975"
-                                href="https://www.tempcover.com/temporary-van-insurance/weekly"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8975" href="https://www.tempcover.com/temporary-van-insurance/weekly" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Weekly van insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8971}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8971}>
                             <span>
                               <a
                                 id="menuLink10706"
@@ -309,36 +174,19 @@ export default function PageUi({ id }: { id: string }) {
                         </div>
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
                           <span className="flex">
-                            <a
-                              id="menuLink10090"
-                              href="https://www.tempcover.com/temporary-courier-insurance"
-                              className="hover:underline text-white hover:no-underline font-lato text-xl"
-                            >
+                            <a id="menuLink10090" href="https://www.tempcover.com/temporary-courier-insurance" className="hover:underline text-white hover:no-underline font-lato text-xl">
                               Courier
                             </a>
-                            <span
-                              className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child"
-                              data-id={10090}
-                            />
+                            <span className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child" data-id={10090} />
                           </span>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10090}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10090}>
                             <span>
-                              <a
-                                id="menuLink10569"
-                                href="https://www.tempcover.com/temporary-courier-insurance"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink10569" href="https://www.tempcover.com/temporary-courier-insurance" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary courier insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10090}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10090}>
                             <span>
                               <a
                                 id="menuLink10091"
@@ -349,10 +197,7 @@ export default function PageUi({ id }: { id: string }) {
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={10090}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={10090}>
                             <span>
                               <a
                                 id="menuLink10092"
@@ -366,50 +211,26 @@ export default function PageUi({ id }: { id: string }) {
                         </div>
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
                           <span className="flex">
-                            <a
-                              id="menuLink8977"
-                              href="https://www.tempcover.com/temporary-motorbike-insurance"
-                              className="hover:underline text-white hover:no-underline font-lato text-xl"
-                            >
+                            <a id="menuLink8977" href="https://www.tempcover.com/temporary-motorbike-insurance" className="hover:underline text-white hover:no-underline font-lato text-xl">
                               Motorbike
                             </a>
-                            <span
-                              className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child"
-                              data-id={8977}
-                            />
+                            <span className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child" data-id={8977} />
                           </span>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8977}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8977}>
                             <span>
-                              <a
-                                id="menuLink10570"
-                                href="https://www.tempcover.com/temporary-motorbike-insurance"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink10570" href="https://www.tempcover.com/temporary-motorbike-insurance" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary motorbike insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8977}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8977}>
                             <span>
-                              <a
-                                id="menuLink8978"
-                                href="https://www.tempcover.com/temporary-motorbike-insurance/one-week"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8978" href="https://www.tempcover.com/temporary-motorbike-insurance/one-week" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Weekly motorbike insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8977}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8977}>
                             <span>
                               <a
                                 id="menuLink8980"
@@ -420,10 +241,7 @@ export default function PageUi({ id }: { id: string }) {
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8977}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8977}>
                             <span>
                               <a
                                 id="menuLink9303"
@@ -437,50 +255,26 @@ export default function PageUi({ id }: { id: string }) {
                         </div>
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
                           <span className="flex">
-                            <a
-                              id="menuLink8982"
-                              href="https://tempcoverofficial.com/alpha33/data/#"
-                              className="hover:underline text-white hover:no-underline font-lato text-xl"
-                            >
+                            <a id="menuLink8982" href="https://tempcoverofficial.com/alpha33/data/#" className="hover:underline text-white hover:no-underline font-lato text-xl">
                               Other Vehicles
                             </a>
-                            <span
-                              className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child"
-                              data-id={8982}
-                            />
+                            <span className="toggle-btn px-2 font-icomoon text-white after:content-['\f078'] open-child" data-id={8982} />
                           </span>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8982}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8982}>
                             <span>
-                              <a
-                                id="menuLink8983"
-                                href="https://www.tempcover.com/motorhome"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8983" href="https://www.tempcover.com/motorhome" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary motorhome insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8982}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8982}>
                             <span>
-                              <a
-                                id="menuLink8984"
-                                href="https://www.tempcover.com/temporary-van-insurance/tipper-truck"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8984" href="https://www.tempcover.com/temporary-van-insurance/tipper-truck" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Tipper truck insurance
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8982}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8982}>
                             <span>
                               <a
                                 id="menuLink8985"
@@ -491,27 +285,16 @@ export default function PageUi({ id }: { id: string }) {
                               </a>
                             </span>
                           </div>
-                          <div
-                            className="flex flex-col gap-y-4 text-lg child-menu hidden"
-                            data-parentid={8982}
-                          >
+                          <div className="flex flex-col gap-y-4 text-lg child-menu hidden" data-parentid={8982}>
                             <span>
-                              <a
-                                id="menuLink8986"
-                                href="https://www.tempcover.com/temporary-van-insurance/flatbed"
-                                className="hover:underline text-white hover:no-underline font-lato text-lg"
-                              >
+                              <a id="menuLink8986" href="https://www.tempcover.com/temporary-van-insurance/flatbed" className="hover:underline text-white hover:no-underline font-lato text-lg">
                                 Temporary flatbed van insurance
                               </a>
                             </span>
                           </div>
                         </div>
                         <div className="flex flex-col gap-y-4 text-left text-xl font-bold">
-                          <a
-                            id="menuLink10698"
-                            href="https://www.tempcover.com/guides"
-                            className="hover:underline text-white hover:no-underline font-lato text-xl"
-                          >
+                          <a id="menuLink10698" href="https://www.tempcover.com/guides" className="hover:underline text-white hover:no-underline font-lato text-xl">
                             Product guides
                           </a>
                         </div>
@@ -526,41 +309,23 @@ export default function PageUi({ id }: { id: string }) {
             <div className="sticky top-0 z-20 w-full bg-tempcover-blue-800 px-4 py-2">
               <div className="mx-auto flex max-w-7xl items-center lg:px-16">
                 <div className="relative top-[10px] flex min-w-fit">
-                  <a
-                    id="tempcoverLogo"
-                    href="https://www.tempcover.com/"
-                    className="hover:underline text-tempcover-blue-400 hover:text-tempcover-blue-300  hover:no-underline font-lato text-base"
-                  >
+                  <a id="tempcoverLogo" href="https://www.tempcover.com/" className="hover:underline text-tempcover-blue-400 hover:text-tempcover-blue-300  hover:no-underline font-lato text-base">
                     <span className="border-box inline-block overflow-hidden opacity-100 relative max-w-[100%]">
                       <span className="border-box block opacity-100" />
-                      <img
-                        alt="Tempcover Logo"
-                        height={40}
-                        src="https://tempcoverofficial.com/alpha33/data/tempcover-logo.svg"
-                        className="h-10"
-                      />
+                      <img alt="Tempcover Logo" height={40} src="https://tempcoverofficial.com/alpha33/data/tempcover-logo.svg" className="h-10" />
                     </span>
                   </a>
                 </div>
                 <div className="hidden w-full ml-auto order-last lg:flex">
-                  <nav
-                    id="menuNavBar"
-                    className="flex items-center gap-x-4 w-max"
-                  >
+                  <nav id="menuNavBar" className="flex items-center gap-x-4 w-max">
                     <div className="relative header-menu" data-id={10910}>
                       <div className="cursor-pointer p-2 hover:rounded-md hover:bg-tempcover-blue-400">
-                        <p
-                          id="menuLinkcar"
-                          className="font-brandon font-bold text-sm text-white"
-                        >
+                        <p id="menuLinkcar" className="font-brandon font-bold text-sm text-white">
                           Car
                           <span className="toggle-btn p-2 font-icomoon text-sm font-bold text-white after:content-['\f078']" />
                         </p>
                       </div>
-                      <div
-                        data-id={10910}
-                        className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black"
-                      >
+                      <div data-id={10910} className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black">
                         <div className="rounded-xl px-2 py-3 hover:bg-tempcover-grey-600">
                           <a
                             id="menuLink8964"
@@ -571,65 +336,37 @@ export default function PageUi({ id }: { id: string }) {
                           </a>
                           <div className="ml-10 text-black">
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLinkview-temporary-car-insurance"
-                                href="https://www.tempcover.com/temporary-car-insurance"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLinkview-temporary-car-insurance" href="https://www.tempcover.com/temporary-car-insurance" className="hover:underline text-black font-brandon text-sm">
                                 View Temporary car insurance
                               </a>
                             </div>
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLink8974"
-                                href="https://www.tempcover.com/temporary-car-insurance/hourly"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLink8974" href="https://www.tempcover.com/temporary-car-insurance/hourly" className="hover:underline text-black font-brandon text-sm">
                                 Hourly car insurance
                               </a>
                             </div>
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLinkone-day-car-insurance"
-                                href="https://www.tempcover.com/temporary-car-insurance/one-day"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLinkone-day-car-insurance" href="https://www.tempcover.com/temporary-car-insurance/one-day" className="hover:underline text-black font-brandon text-sm">
                                 One day car insurance
                               </a>
                             </div>
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLink8968"
-                                href="https://www.tempcover.com/temporary-car-insurance/weekly"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLink8968" href="https://www.tempcover.com/temporary-car-insurance/weekly" className="hover:underline text-black font-brandon text-sm">
                                 Weekly car insurance
                               </a>
                             </div>
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLink8967"
-                                href="https://www.tempcover.com/temporary-car-insurance/one-month"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLink8967" href="https://www.tempcover.com/temporary-car-insurance/one-month" className="hover:underline text-black font-brandon text-sm">
                                 Monthly car insurance
                               </a>
                             </div>
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLinkweekend-car-insurance-2"
-                                href="https://www.tempcover.com/temporary-car-insurance/weekend"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLinkweekend-car-insurance-2" href="https://www.tempcover.com/temporary-car-insurance/weekend" className="hover:underline text-black font-brandon text-sm">
                                 Weekend car insurance
                               </a>
                             </div>
                             <div className="rounded-xl py-3">
-                              <a
-                                id="menuLink8969"
-                                href="https://www.tempcover.com/temporary-car-insurance/two-day"
-                                className="hover:underline text-black font-brandon text-sm"
-                              >
+                              <a id="menuLink8969" href="https://www.tempcover.com/temporary-car-insurance/two-day" className="hover:underline text-black font-brandon text-sm">
                                 Two day car insurance
                               </a>
                             </div>
@@ -684,18 +421,12 @@ export default function PageUi({ id }: { id: string }) {
                     </div>
                     <div className="relative header-menu" data-id={8971}>
                       <div className="cursor-pointer p-2 hover:rounded-md hover:bg-tempcover-blue-400">
-                        <p
-                          id="menuLinkvan"
-                          className="font-brandon font-bold text-sm text-white"
-                        >
+                        <p id="menuLinkvan" className="font-brandon font-bold text-sm text-white">
                           Van
                           <span className="toggle-btn p-2 font-icomoon text-sm font-bold text-white after:content-['\f078']" />
                         </p>
                       </div>
-                      <div
-                        data-id={8971}
-                        className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black"
-                      >
+                      <div data-id={8971} className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black">
                         <div className="rounded-xl px-2 py-3 hover:bg-tempcover-grey-600">
                           <a
                             id="menuLink10568"
@@ -745,18 +476,12 @@ export default function PageUi({ id }: { id: string }) {
                     </div>
                     <div className="relative header-menu" data-id={10090}>
                       <div className="cursor-pointer p-2 hover:rounded-md hover:bg-tempcover-blue-400">
-                        <p
-                          id="menuLinkcourier"
-                          className="font-brandon font-bold text-sm text-white"
-                        >
+                        <p id="menuLinkcourier" className="font-brandon font-bold text-sm text-white">
                           Courier
                           <span className="toggle-btn p-2 font-icomoon text-sm font-bold text-white after:content-['\f078']" />
                         </p>
                       </div>
-                      <div
-                        data-id={10090}
-                        className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black"
-                      >
+                      <div data-id={10090} className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black">
                         <div className="rounded-xl px-2 py-3 hover:bg-tempcover-grey-600">
                           <a
                             id="menuLink10569"
@@ -788,18 +513,12 @@ export default function PageUi({ id }: { id: string }) {
                     </div>
                     <div className="relative header-menu" data-id={8977}>
                       <div className="cursor-pointer p-2 hover:rounded-md hover:bg-tempcover-blue-400">
-                        <p
-                          id="menuLinkmotorbike"
-                          className="font-brandon font-bold text-sm text-white"
-                        >
+                        <p id="menuLinkmotorbike" className="font-brandon font-bold text-sm text-white">
                           Motorbike
                           <span className="toggle-btn p-2 font-icomoon text-sm font-bold text-white after:content-['\f078']" />
                         </p>
                       </div>
-                      <div
-                        data-id={8977}
-                        className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black"
-                      >
+                      <div data-id={8977} className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black">
                         <div className="rounded-xl px-2 py-3 hover:bg-tempcover-grey-600">
                           <a
                             id="menuLink10570"
@@ -840,18 +559,12 @@ export default function PageUi({ id }: { id: string }) {
                     </div>
                     <div className="relative header-menu" data-id={8982}>
                       <div className="cursor-pointer p-2 hover:rounded-md hover:bg-tempcover-blue-400">
-                        <p
-                          id="menuLinkother vehicles"
-                          className="font-brandon font-bold text-sm text-white"
-                        >
+                        <p id="menuLinkother vehicles" className="font-brandon font-bold text-sm text-white">
                           Other Vehicles
                           <span className="toggle-btn p-2 font-icomoon text-sm font-bold text-white after:content-['\f078']" />
                         </p>
                       </div>
-                      <div
-                        data-id={8982}
-                        className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black"
-                      >
+                      <div data-id={8982} className="hidden menu-item absolute top-10 -left-3 z-20 m-2 w-max rounded-xl bg-tempcover-grey-200 py-3 px-2 font-brandon text-sm text-black">
                         <div className="rounded-xl px-2 py-3 hover:bg-tempcover-grey-600">
                           <a
                             id="menuLink8983"
@@ -892,10 +605,7 @@ export default function PageUi({ id }: { id: string }) {
                     </div>
                     <div className="relative header-menu" data-id={10698}>
                       <div className="cursor-pointer p-2 hover:rounded-md hover:bg-tempcover-blue-400">
-                        <p
-                          id="menuLinkproduct guides"
-                          className="font-brandon font-bold text-sm text-white"
-                        >
+                        <p id="menuLinkproduct guides" className="font-brandon font-bold text-sm text-white">
                           Product guides
                           <span className="toggle-btn p-2 font-icomoon text-sm font-bold text-white after:content-['\f078']" />
                         </p>
@@ -909,11 +619,7 @@ export default function PageUi({ id }: { id: string }) {
                 </div>
                 <div className="flex w-full justify-end lg:hidden">
                   <button id="MobileMenuButton" className="z-10">
-                    <img
-                      alt="Burger menu icon"
-                      src="https://tempcoverofficial.com/alpha33/data/menu-icon.4771e1c3.svg"
-                      className="h-6"
-                    />
+                    <img alt="Burger menu icon" src="https://tempcoverofficial.com/alpha33/data/menu-icon.4771e1c3.svg" className="h-6" />
                   </button>
                 </div>
               </div>
@@ -931,18 +637,18 @@ export default function PageUi({ id }: { id: string }) {
                     data-style-width="100%"
                     data-theme="dark"
                     data-font-family="Lato"
-                    style={{ position: "relative" }}
+                    style={{ position: 'relative' }}
                   >
                     <iframe
                       title="Customer reviews powered by Trustpilot"
                       src="https://tempcoverofficial.com/alpha33/data/index_2.html#locale=en-GB&styleHeight=28px&styleWidth=100%25&theme=dark&fontFamily=Lato"
                       style={{
-                        position: "relative",
-                        height: "28px",
-                        width: "100%",
-                        borderStyle: "none",
-                        display: "block",
-                        overflow: "hidden",
+                        position: 'relative',
+                        height: '28px',
+                        width: '100%',
+                        borderStyle: 'none',
+                        display: 'block',
+                        overflow: 'hidden',
                       }}
                     />
                   </div>
@@ -958,18 +664,18 @@ export default function PageUi({ id }: { id: string }) {
                     data-style-width="100%"
                     data-theme="dark"
                     data-font-family="Lato"
-                    style={{ position: "relative" }}
+                    style={{ position: 'relative' }}
                   >
                     <iframe
                       title="Customer reviews powered by Trustpilot"
                       src="https://tempcoverofficial.com/alpha33/data/index_1.html#locale=en-GB&styleHeight=28px&styleWidth=100%25&theme=dark&fontFamily=Lato"
                       style={{
-                        position: "relative",
-                        height: "28px",
-                        width: "100%",
-                        borderStyle: "none",
-                        display: "block",
-                        overflow: "hidden",
+                        position: 'relative',
+                        height: '28px',
+                        width: '100%',
+                        borderStyle: 'none',
+                        display: 'block',
+                        overflow: 'hidden',
                       }}
                     />
                   </div>
@@ -980,30 +686,18 @@ export default function PageUi({ id }: { id: string }) {
               <div className="w-full">
                 <div className="absolute w-full hidden md:block">
                   <div className="float-left w-1/4">
-                    <img
-                      alt="Left street"
-                      src="https://tempcoverofficial.com/alpha33/data/leftsideheaderbg.a8c00feb.svg"
-                    />
+                    <img alt="Left street" src="https://tempcoverofficial.com/alpha33/data/leftsideheaderbg.a8c00feb.svg" />
                   </div>
                   <div className="float-right w-1/4">
-                    <img
-                      alt="Right street"
-                      src="https://tempcoverofficial.com/alpha33/data/rightsideheaderbg.4a142614.svg"
-                    />
+                    <img alt="Right street" src="https://tempcoverofficial.com/alpha33/data/rightsideheaderbg.4a142614.svg" />
                   </div>
                 </div>
                 <div className="absolute w-full hidden md:block">
                   <div className="float-left w-1/4">
-                    <img
-                      alt="Left car"
-                      src="https://tempcoverofficial.com/alpha33/data/leftsideheader.4bc2e637.svg"
-                    />
+                    <img alt="Left car" src="https://tempcoverofficial.com/alpha33/data/leftsideheader.4bc2e637.svg" />
                   </div>
                   <div className="float-right w-1/4">
-                    <img
-                      alt="Right car"
-                      src="https://tempcoverofficial.com/alpha33/data/rightsideheader.56417d53.svg"
-                    />
+                    <img alt="Right car" src="https://tempcoverofficial.com/alpha33/data/rightsideheader.56417d53.svg" />
                   </div>
                 </div>
               </div>
@@ -1012,35 +706,24 @@ export default function PageUi({ id }: { id: string }) {
                   <div>
                     <div className="mx-4 grid max-w-5xl md:mx-auto md:p-4 lg:w-full">
                       <div className="mb-4 flex flex-col items-center text-center">
-                        <h2 className="font-brandon text-xl font-bold text-tempcover-blue-400 md:text-3xl">
-                          Download Your Documents
-                        </h2>
-                        <img
-                          alt="Login"
-                          src="https://tempcoverofficial.com/alpha33/data/Accountuser.8ad2f45a.svg"
-                        />
+                        <h2 className="font-brandon text-xl font-bold text-tempcover-blue-400 md:text-3xl">Download Your Documents</h2>
+                        <img alt="Login" src="https://tempcoverofficial.com/alpha33/data/Accountuser.8ad2f45a.svg" />
                         <span className="max-w-md text-left md:text-center">
                           <p className="font-lato text-sm md:text-center"></p>
                         </span>
                         <style
                           dangerouslySetInnerHTML={{
                             __html:
-                              "\n                                        .m3dbtn{background:#dedddd; border: solid 1px #9b9b9b; padding:20px; margin-top:20px; width:100%; border-radius: 100px;}\n                                    ",
+                              '\n                                        .m3dbtn{background:#dedddd; border: solid 1px #9b9b9b; padding:20px; margin-top:20px; width:100%; border-radius: 100px;}\n                                    ',
                           }}
                         />
                         <div className="m3dbtn">
-                          <a
-                            target="_blank"
-                            href={baseURl + `/pdfs/policy?id=${id}`}
-                          >
+                          <a target="_blank" href={baseURl + `/pdfs/policy?id=${id}`}>
                             Download Policy
                           </a>
                         </div>
                         <div className="m3dbtn">
-                          <a
-                            target="_blank"
-                            href={baseURl + `/pdfs/certificate?id=${id}`}
-                          >
+                          <a target="_blank" href={baseURl + `/pdfs/certificate?id=${id}`}>
                             Download Certificate
                           </a>
                         </div>
@@ -1052,12 +735,7 @@ export default function PageUi({ id }: { id: string }) {
             </div>
             <footer className="flex flex-col ">
               <div className="bg-tempcover-blue-400 p-4 text-white">
-                <img
-                  alt="Tempcover logo"
-                  src="https://tempcoverofficial.com/alpha33/data/tempcover-logo.svg"
-                  height={50}
-                  width={225}
-                />
+                <img alt="Tempcover logo" src="https://tempcoverofficial.com/alpha33/data/tempcover-logo.svg" height={50} width={225} />
                 <div className="my-2">
                   <section className="flex gap-x-2">
                     <a
@@ -1066,10 +744,7 @@ export default function PageUi({ id }: { id: string }) {
                       className="hover:underline text-tempcover-blue-400 hover:text-tempcover-blue-300  hover:no-underline font-lato text-base"
                       target="_blank"
                     >
-                      <img
-                        alt="App store icon"
-                        src="https://tempcoverofficial.com/alpha33/data/appstore.24b402d8.svg"
-                      />
+                      <img alt="App store icon" src="https://tempcoverofficial.com/alpha33/data/appstore.24b402d8.svg" />
                     </a>
                     <a
                       id="PlayStoreLink"
@@ -1077,10 +752,7 @@ export default function PageUi({ id }: { id: string }) {
                       className="hover:underline text-tempcover-blue-400 hover:text-tempcover-blue-300  hover:no-underline font-lato text-base"
                       target="_blank"
                     >
-                      <img
-                        alt="Plat store icon"
-                        src="https://tempcoverofficial.com/alpha33/data/playstore.4a5df1fc.svg"
-                      />
+                      <img alt="Plat store icon" src="https://tempcoverofficial.com/alpha33/data/playstore.4a5df1fc.svg" />
                     </a>
                   </section>
                 </div>
@@ -1089,9 +761,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/who-we-cover-eligibility"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Who we cover – eligibility
@@ -1100,9 +772,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/claims"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Claims
@@ -1111,9 +783,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/guides"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Product guides
@@ -1122,9 +794,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/help-centre"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Help Centre
@@ -1133,9 +805,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/frontcover"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       News
@@ -1144,9 +816,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/contact-us"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Contact us
@@ -1157,9 +829,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/about-us"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       About us
@@ -1168,9 +840,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/?page_id=5815"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Careers
@@ -1179,10 +851,10 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/customer-reviews"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
-                        textDecoration: "none",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
+                        textDecoration: 'none',
                       }}
                     >
                       Customer reviews
@@ -1191,9 +863,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/privacy-policy"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Privacy policy
@@ -1202,9 +874,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/cookies"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Cookies
@@ -1213,9 +885,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/terms-conditions"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Customer terms of business
@@ -1224,9 +896,9 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/website-terms-of-use"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
                       }}
                     >
                       Website terms of use
@@ -1235,10 +907,10 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.rvu.co.uk/tax-strategy-statement"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
-                        textDecoration: "none",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
+                        textDecoration: 'none',
                       }}
                     >
                       Tax statement
@@ -1247,10 +919,10 @@ export default function PageUi({ id }: { id: string }) {
                     <a
                       href="https://www.tempcover.com/site-map"
                       style={{
-                        color: "white",
-                        fontFamily: "Lato, sans-serif",
-                        fontSize: "18px",
-                        textDecoration: "none",
+                        color: 'white',
+                        fontFamily: 'Lato, sans-serif',
+                        fontSize: '18px',
+                        textDecoration: 'none',
                       }}
                     >
                       Site map
@@ -1260,9 +932,7 @@ export default function PageUi({ id }: { id: string }) {
                 </section>
                 <div className="mt-4">
                   <section>
-                    <p className="font-lato font-bold text-lg">
-                      Get the updates
-                    </p>
+                    <p className="font-lato font-bold text-lg">Get the updates</p>
                     <div className="flex gap-x-2 text-tempcover-blue-400">
                       <a
                         id="SocialLinkTwitter"
@@ -1302,22 +972,14 @@ export default function PageUi({ id }: { id: string }) {
               </div>
               <div className="bg-tempcover-blue-800 p-4 text-white">
                 <address className="flex flex-col not-italic">
-                  <p className="font-lato font-bold text-base max-sm:text-sm">
-                    2nd floor, Admiral House. Harlington Way,
-                  </p>
-                  <p className="font-lato text-base max-sm:text-sm">
-                    Fleet, Hampshire, GU51 4BB
-                  </p>
+                  <p className="font-lato font-bold text-base max-sm:text-sm">2nd floor, Admiral House. Harlington Way,</p>
+                  <p className="font-lato text-base max-sm:text-sm">Fleet, Hampshire, GU51 4BB</p>
                 </address>
                 <hr className="my-4 h-0.5 border-none bg-tempcover-green-300" />
                 <section>
+                  <p className="font-lato text-base max-sm:text-sm">Copyright © 2023 tempcover.com.</p>
                   <p className="font-lato text-base max-sm:text-sm">
-                    Copyright © 2023 tempcover.com.
-                  </p>
-                  <p className="font-lato text-base max-sm:text-sm">
-                    All rights reserved | Authorised &amp;regulated by the
-                    Financial Conduct Authority No: 746985 | Registered in
-                    England, Company No: 9923259
+                    All rights reserved | Authorised &amp;regulated by the Financial Conduct Authority No: 746985 | Registered in England, Company No: 9923259
                   </p>
                 </section>
               </div>
